@@ -57,6 +57,7 @@ for model_name, local_path, tokenizer, use_accelerate in models:
         config = AutoConfig.from_pretrained(model_name)
         with init_empty_weights():
             model = AutoModelForCausalLM.from_config(config)
+        model.tie_weights()
         model = load_checkpoint_and_dispatch(model, HOME + local_path, device_map="auto", offload_folder = ".temp")
     else:
         model = AutoModelForCausalLM.from_pretrained(model_name)
