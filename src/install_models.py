@@ -35,14 +35,14 @@ for model_name, local_path in models:
     config = AutoConfig.from_pretrained(model_name)
     with init_empty_weights():
         model = AutoModelForCausalLM.from_config(config)
-    model = load_checkpoint_and_dispatch(model, local_path, device_map="auto")
+    model = load_checkpoint_and_dispatch(model, HOME + local_path, device_map="auto")
     tokenizer = AutoTokenizer.from_pretrained(model_name)
     
     try:
-        inputs = tokenizer("Hello, my dog is cute and ", return_tensors="pt")
-        print(tokenizer.decode(model.generate(**inputs)))
+        inputs = tokenizer("Ich bin ein Sprachmodell, also", return_tensors="pt")
+        print(tokenizer.decode(model.generate(**inputs)[0]))
     except:
-        traceback.print_exec()
+        traceback.print_exc()
     finally:
         del model
         del tokenizer
