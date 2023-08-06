@@ -4,7 +4,7 @@ import traceback
 
 models = [
     ("stefan-it/german-gpt2-larger",
-    "stefan-it--german-gpt2-larger/snapshots/aa2138bb716507181c1bbd288a1076837ed0ca3b/pytorch_model.bin"),
+    "~/.cache/huggingface/hub/models--stefan-it--german-gpt2-larger/snapshots/aa2138bb716507181c1bbd288a1076837ed0ca3b/pytorch_model.bin"),
     ("malteos/bloom-6b4-clp-german",
     "malteos--bloom-6b4-clp-german"),
     ("ai-forever/mGPT",
@@ -31,7 +31,7 @@ for model_name, local_path in models:
     config = AutoConfig.from_pretrained(model_name)
     with init_empty_weights():
         model = AutoModelForCausalLM.from_config(config)
-    model = load_checkpoint_and_dispatch(model, f"~/.cache/huggingface/hub/models--{local_path}", device_map="auto")
+    model = load_checkpoint_and_dispatch(model, local_path, device_map="auto")
     tokenizer = AutoTokenizer.from_pretrained(model_name)
     
     try:
