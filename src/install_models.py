@@ -1,4 +1,5 @@
-from transformers import pipeline
+from transformers import AutoConfig, pipeline, AutoTokenizer, AutoModelForCausalLM
+from accelerate import init_empty_weights, load_checkpoint_and_dispatch
 import traceback
 
 models = [
@@ -15,12 +16,19 @@ models = [
 ]
 
 for model in models:
-    print(f"Now loading model {model}")
-    pipe = pipeline("text-generation", model = model, framework = "pt")
+    print(f"Now loading model {model_name}")
+    
+    config = AutoConfig.from_pretrained(model_name)
+    with init_empty_weights():
+        empty_model = AutoModelForCausalLM.from_config(config)
+    model = load_checkpoint_and_dispatch(model, "sharded-gpt-j-6B", device_map="auto")
+    tokenizer = AutoTokenizer.from_pretrained(model_name)
     
     try:
-        print(pipe("Ich bin ein Sprachmodell, also"))
+        inputs = tokenizer("Hello, my dog is cute and ", return_tensors="pt")
+        print(model.generate(**inputs))
     except:
         traceback.print_exec()
     finally:
-        del pipe
+        del model
+        del tokenizer
