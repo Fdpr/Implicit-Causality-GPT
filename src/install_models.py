@@ -20,10 +20,11 @@ models = [
     "/.cache/huggingface/hub/models--ai-forever--mGPT/snapshots/cb99dd42d3486c2ed9c14f92ed22e9bc7bbc6ac4/pytorch_model.bin",
     AutoTokenizer,
     True),
-    ("DAMO-NLP-MT/polylm-13b",
-    "/.cache/huggingface/hub/models--DAMO-NLP-MT--polylm-13b/snapshots/685e5014840342bfdecd55ea961d435357c16a22/pytorch_model.bin.index.json",
-    LlamaTokenizer,
-    True),
+    # For some reason, the polylm model doesn't work with Accelerate
+    # ("DAMO-NLP-MT/polylm-13b",
+    # "/.cache/huggingface/hub/models--DAMO-NLP-MT--polylm-13b/snapshots/685e5014840342bfdecd55ea961d435357c16a22/pytorch_model.bin.index.json",
+    # LlamaTokenizer,
+    # True),
     # We don't to open buddy for now, sadly...
     # ("OpenBuddy/openbuddy-llama2-13b-v8.1-fp16",
     # "/.cache/huggingface/hub/models--OpenBuddy--openbuddy-llama2-13b-v8.1-fp16/snapshots/c1a5f8fd23e3823ced6efc0ea1df973da850ba7e/pytorch_model.bin.index.json",
