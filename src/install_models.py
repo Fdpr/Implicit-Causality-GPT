@@ -45,10 +45,11 @@ models = [
     "/.cache/huggingface/hub/models--facebook--xglm-4.5B/snapshots/dc6a67fac06c8bca7860b84656a0cb736293a7a8/pytorch_model.bin",
     AutoTokenizer,
     True),
-    ("facebook/xglm-7.5B",
-    "/.cache/huggingface/hub/models--facebook--xglm-7.5B/snapshots/732d59308a844004bd9a4def972cc7c3896a38e0/pytorch_model.bin",
-    AutoTokenizer,
-    True)
+    # The 7.5B model is not sharded and won't work with Accelerate
+    # ("facebook/xglm-7.5B",
+    # "/.cache/huggingface/hub/models--facebook--xglm-7.5B/snapshots/732d59308a844004bd9a4def972cc7c3896a38e0/pytorch_model.bin",
+    # AutoTokenizer,
+    # True)
 ]
 
 for model_name, local_path, tokenizer, use_accelerate in models:
