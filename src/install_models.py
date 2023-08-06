@@ -4,7 +4,7 @@ import traceback
 
 models = [
     ("stefan-it/german-gpt2-larger",
-    "stefan-it--german-gpt2-larger"),
+    "stefan-it--german-gpt2-larger/snapshots/aa2138bb716507181c1bbd288a1076837ed0ca3b/pytorch_model.bin"),
     ("malteos/bloom-6b4-clp-german",
     "malteos--bloom-6b4-clp-german"),
     ("ai-forever/mGPT",
