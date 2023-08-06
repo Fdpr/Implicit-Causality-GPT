@@ -15,13 +15,13 @@ models = [
     "facebook/xglm-7.5B"
 ]
 
-for model in models:
+for model_name in models:
     print(f"Now loading model {model_name}")
     
     config = AutoConfig.from_pretrained(model_name)
     with init_empty_weights():
-        empty_model = AutoModelForCausalLM.from_config(config)
-    model = load_checkpoint_and_dispatch(model, "sharded-gpt-j-6B", device_map="auto")
+        model = AutoModelForCausalLM.from_config(config)
+    model = load_checkpoint_and_dispatch(model, f"~/.cache/huggingface/hub/models--{model_name}", device_map="auto")
     tokenizer = AutoTokenizer.from_pretrained(model_name)
     
     try:
