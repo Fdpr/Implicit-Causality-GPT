@@ -1,28 +1,32 @@
 from transformers import AutoConfig, pipeline, AutoTokenizer, AutoModelForCausalLM
 from accelerate import init_empty_weights, load_checkpoint_and_dispatch
+from pathlib import Path
+
+HOME = str(Path.home())
+
 import traceback
 
 models = [
     ("stefan-it/german-gpt2-larger",
-    "~/.cache/huggingface/hub/models--stefan-it--german-gpt2-larger/snapshots/aa2138bb716507181c1bbd288a1076837ed0ca3b/pytorch_model.bin"),
+    "/.cache/huggingface/hub/models--stefan-it--german-gpt2-larger/snapshots/aa2138bb716507181c1bbd288a1076837ed0ca3b/pytorch_model.bin"),
     ("malteos/bloom-6b4-clp-german",
-    "malteos--bloom-6b4-clp-german"),
+    "/.cache/huggingface/hub/models--malteos--bloom-6b4-clp-german/snapshots/2e5a85761d8a39ec602ada390e87ff8d5d316191/pytorch_model.bin.index.json"),
     ("ai-forever/mGPT",
-    "ai-forever--mGPT"),
+    "/.cache/huggingface/hub/models--ai-forever--mGPT/snapshots/cb99dd42d3486c2ed9c14f92ed22e9bc7bbc6ac4/pytorch_model.bin"),
     ("DAMO-NLP-MT/polylm-13b",
-    "DAMO-NLP-MT--polylm-13b"),
+    "/.cache/huggingface/hub/models--DAMO-NLP-MT--polylm-13b/snapshots/685e5014840342bfdecd55ea961d435357c16a22/pytorch_model.bin.index.json"),
     ("OpenBuddy/openbuddy-llama2-13b-v8.1-fp16",
-    "OpenBuddy--openbuddy-llama2-13b-v8.1-fp16"),
+    "/.cache/huggingface/hub/models--OpenBuddy--openbuddy-llama2-13b-v8.1-fp16/snapshots/c1a5f8fd23e3823ced6efc0ea1df973da850ba7e/pytorch_model.bin.index.json"),
     ("facebook/xglm-564M",
-    "facebook--xglm-564M"),
+    "/.cache/huggingface/hub/models--facebook--xglm-564M/snapshots/f3059f01b98ccc877c673149e0178c0e957660f9/pytorch_model.bin"),
     ("facebook/xglm-1.7B",
-    "facebook--xglm-1.7B"),
+    "/.cache/huggingface/hub/models--facebook--xglm-1.7B/snapshots/d23a5e8e2164af31a84a26756b9b17f925143050/pytorch_model.bin"),
     ("facebook/xglm-2.9B",
-    "facebook--xglm-2.9B"),
+    "/.cache/huggingface/hub/models--facebook--xglm-2.9B/snapshots/33c659ae27de09c0a54123d3902dac48cbb8592a/pytorch_model.bin"),
     ("facebook/xglm-4.5B",
-    "facebook--xglm-4.5B"),
+    "/.cache/huggingface/hub/models--facebook--xglm-4.5B/snapshots/dc6a67fac06c8bca7860b84656a0cb736293a7a8/pytorch_model.bin"),
     ("facebook/xglm-7.5B",
-    "facebook--xglm-7.5B")
+    "/.cache/huggingface/hub/models--facebook--xglm-7.5B/snapshots/732d59308a844004bd9a4def972cc7c3896a38e0/pytorch_model.bin")
 ]
 
 for model_name, local_path in models:
@@ -36,7 +40,7 @@ for model_name, local_path in models:
     
     try:
         inputs = tokenizer("Hello, my dog is cute and ", return_tensors="pt")
-        print(model.generate(**inputs))
+        print(tokenizer.decode(model.generate(**inputs)))
     except:
         traceback.print_exec()
     finally:
