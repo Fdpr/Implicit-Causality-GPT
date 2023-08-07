@@ -65,6 +65,8 @@ for model_name in models:
                     traceback.print_exc()
     exp1 = pd.DataFrame(rows, columns = ["con", "np1", "np2", "female", "cat", "verb", "continuation"])
     exp1.to_csv(f"../data/coreference{model_name.replace('/', '--')}.csv", sep=";", index=False)
+    
     del model
     del exp1
+    del bar
     
