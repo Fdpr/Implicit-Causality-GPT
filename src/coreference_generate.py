@@ -21,10 +21,10 @@ class PromptDataset(Dataset):
 models = [
     "stefan-it/german-gpt2-larger",
     # "malteos/bloom-6b4-clp-german",
-    # "ai-forever/mGPT",
+    "ai-forever/mGPT",
     "facebook/xglm-564M",
-    # "facebook/xglm-1.7B",
-    # "facebook/xglm-2.9B",
+    "facebook/xglm-1.7B",
+    "facebook/xglm-2.9B",
     # "facebook/xglm-4.5B"
 ]
 
