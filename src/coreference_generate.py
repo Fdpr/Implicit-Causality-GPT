@@ -4,12 +4,13 @@ import json
 from random import Random
 from tqdm import tqdm
 import transformers
+import traceback
 
 transformers.logging.set_verbosity_error()
 
 models = [
     "stefan-it/german-gpt2-larger",
-    "malteos/bloom-6b4-clp-german",
+    # "malteos/bloom-6b4-clp-german",
     "ai-forever/mGPT",
     "facebook/xglm-564M",
     "facebook/xglm-1.7B",
@@ -36,7 +37,8 @@ female_pairing = list(zip(female_names, male_shuffled, [True for name in male_na
 verb_list = [(cat, verb) for cat in verbs.keys() for verb in verbs[cat]]
 
 for model_name in models:
-
+       
+    print(f"now loading: {model_name}")
     model = pipeline("text-generation", model = model_name)
     exp1 = pd.DataFrame(columns = ["con", "np1", "np2", "female", "cat", "verb", "continuation"])
     
@@ -50,18 +52,18 @@ for model_name in models:
                 break
             for cat, verb in verb_list:
                 if bar.n > 10:
-                break
+                    break
                 try:
                     bar.update(1)
                     prompt = f"{np1} {verb} {np2}, {con}"
                     continuation = model(prompt, remove_invalid_values=True, early_stopping = True, 
-                                         do_sample = False, diversity_penalty = .6, num_beam_groups = 5, 
-                                         num_beams = 10, max_new_tokens = 20)["generated_text"][len(prompt):]
+                                         do_sample = False, diversity_penalty = .6, num_beam_groups = 4, 
+                                         num_beams = 8, max_new_tokens = 12)["generated_text"][len(prompt):]
                     nrow = {"con": con, "np1": np1, "np2": np2, "female": female, "cat": cat, "verb": verb, "continuation": continuation}
                     exp1 = exp1.append(nrow, ignore_index=True)
-                except Exception as e:
-                    print(e)
-    exp1.to_csv(f"../data/coreference{model_name.replace('/', '--'}.csv", sep=";", index=False)
+                except Exception:
+                    traceback.print_exc()
+    exp1.to_csv(f"../data/coreference{model_name.replace('/', '--')}.csv", sep=";", index=False)
     del model
     del exp1
     
