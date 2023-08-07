@@ -49,8 +49,8 @@ verb_list = [(cat, verb) for cat in verbs.keys() for verb in verbs[cat]]
 for model_name in models:
        
     print(f"now loading: {model_name}")
-    model = pipeline("text-generation", model = model_name, device = 0, device_map = "auto")
-    model.tokenizer.pad_token_id = model.model.config.eos_token_id
+    model = pipeline("text-generation", model = model_name, device = 0)
+    # model.tokenizer.pad_token_id = model.model.config.eos_token_id
     print(model.device)
     
     rows = []
@@ -77,11 +77,10 @@ for model_name in models:
                     
     exp1 = pd.DataFrame(rows, columns = ["con", "np1", "np2", "female", "cat", "verb", "prompt"])
     
-    prompts = exp1["prompt"].tolist()
+    prompts = PromptDataset(exp1["prompt"].tolist())
     conts = []
     
-    for out in tqdm(model(prompts, batch_size = 64, remove_invalid_values=True, early_stopping = True, do_sample = False, diversity_penalty = .8, num_beam_groups = 5, num_beams = 10, max_new_tokens = 18), total = len(prompts)):
-        print(out)
+    for out in tqdm(model(prompts, remove_invalid_values=True, early_stopping = True, do_sample = False, diversity_penalty = .5, num_beam_groups = 5, num_beams = 10, max_new_tokens = 18), total = len(prompts)):
         conts += [model_out["generated_text"] for model_out in out]
     exp1["continuation"] = pd.Series(conts)
     
