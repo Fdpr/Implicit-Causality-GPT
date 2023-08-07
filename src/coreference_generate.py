@@ -34,7 +34,9 @@ verb_list = [(cat, verb) for cat in verbs.keys() for verb in verbs[cat]]
 
 for model_name in models:
 
-
+    model = pipeline("text-generation", model = model_name)
+    exp1 = pd.DataFrame(columns = ["con", "np1", "np2", "female", "cat", "verb", "continuation"])
+    
     bar = tqdm(min=0, max= 2 * len(male_pairing) * 2 * len(verb_list))
 
     for con in ["weil", "sodass"]:
@@ -55,3 +57,6 @@ for model_name in models:
                 except Exception as e:
                     print(e)
     exp1.to_csv(f"../data/coreference{model_name}.csv", sep=";", index=False)
+    del model
+    del exp1
+    
