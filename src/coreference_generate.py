@@ -59,14 +59,8 @@ for model_name, batch_size, device, device_map in models:
     n = 0
 
     for con in ["weil", "sodass"]:
-        if n > 128:
-            break
         for np1, np2, female in male_pairing + female_pairing:
-            if n > 128:
-                    break
             for cat, verb in verb_list:
-                if n > 128:
-                    break
                 try:
                     n += 1
                     prompt = f"{np1} {verb} {np2}, {con}"
@@ -80,7 +74,7 @@ for model_name, batch_size, device, device_map in models:
     prompts = PromptDataset(exp1["prompt"].tolist())
     conts = []
     
-    for out in tqdm(model(prompts, batch_size = batch_size, remove_invalid_values=True, early_stopping = True, do_sample = False, diversity_penalty = .6, num_beam_groups = 12, num_beams = 12, max_new_tokens = 18), total = len(prompts)):
+    for out in tqdm(model(prompts, batch_size = batch_size, remove_invalid_values=True, early_stopping = True, do_sample = False, diversity_penalty = .6, num_beam_groups = 10, num_beams = 10, max_new_tokens = 18), total = len(prompts)):
         conts += [model_out["generated_text"] for model_out in out]
     exp1["continuation"] = pd.Series(conts)
     
