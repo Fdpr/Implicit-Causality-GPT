@@ -79,7 +79,7 @@ for model_name in models:
     prompts = exp1["prompt"]
     conts = []
     
-    for out in tqdm(model(prompts, batch_size = 64), total = len(prompts):
+    for out in tqdm(model(prompts, batch_size = 64remove_invalid_values=True, early_stopping = True, do_sample = False, diversity_penalty = .8, num_beam_groups = 5, num_beams = 10, max_new_tokens = 18), total = len(prompts):
         print(out)
         conts += [model_out["generated_text"] for model_out in out]
     exp1["continuation"] = pd.Series(conts)
