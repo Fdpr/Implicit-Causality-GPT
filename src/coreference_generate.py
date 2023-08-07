@@ -57,7 +57,8 @@ for model_name in models:
                     bar.update(1)
                     prompt = f"{np1} {verb} {np2}, {con}"
                     # continuation = model(prompt, remove_invalid_values=True, early_stopping = True, do_sample = False, diversity_penalty = .6, num_beam_groups = 4, num_beams = 8, max_new_tokens = 12)[0]["generated_text"][len(prompt):]
-                    continuation = model(prompt, remove_invalid_values=False, early_stopping = True, do_sample = False, diversity_penalty = .6, num_beam_groups = 4, num_beams = 8, max_new_tokens = 12)[0]["generated_text"][len(prompt):]
+                    # continuation = model(prompt, remove_invalid_values=False, early_stopping = True, do_sample = False, diversity_penalty = .6, num_beam_groups = 4, num_beams = 8, max_new_tokens = 12)[0]["generated_text"][len(prompt):]
+                    continuation = model(prompt, do_sample = True, top_k = 0, top_p = .95, max_new_tokens = 20)[0]["generated_text"][len(prompt):]
                     nrow = {"con": con, "np1": np1, "np2": np2, "female": female, "cat": cat, "verb": verb, "continuation": continuation}
                     exp1 = exp1.append(nrow, ignore_index=True)
                 except Exception:
