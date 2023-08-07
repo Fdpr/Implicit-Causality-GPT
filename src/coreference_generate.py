@@ -50,7 +50,7 @@ for model_name in models:
        
     print(f"now loading: {model_name}")
     model = pipeline("text-generation", model = model_name, device = 0, device_map = "auto")
-    model.tokenizer.pad_token_id = model.config.eos_token_id
+    model.tokenizer.pad_token_id = model.model.config.eos_token_id
     print(model.device)
     
     rows = []
