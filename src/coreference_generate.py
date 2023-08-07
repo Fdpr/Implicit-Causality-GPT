@@ -40,9 +40,9 @@ for model_name in models:
        
     print(f"now loading: {model_name}")
     model = pipeline("text-generation", model = model_name)
-    exp1 = pd.DataFrame(columns = ["con", "np1", "np2", "female", "cat", "verb", "continuation"])
     
     bar = tqdm(total = 2 * len(male_pairing) * 2 * len(verb_list))
+    rows = []
 
     for con in ["weil", "sodass"]:
         if bar.n > 10:
@@ -60,9 +60,10 @@ for model_name in models:
                     # continuation = model(prompt, remove_invalid_values=False, early_stopping = True, do_sample = False, diversity_penalty = .6, num_beam_groups = 4, num_beams = 8, max_new_tokens = 12)[0]["generated_text"][len(prompt):]
                     continuation = model(prompt, do_sample = True, top_k = 0, top_p = .95, max_new_tokens = 20)[0]["generated_text"][len(prompt):]
                     nrow = {"con": con, "np1": np1, "np2": np2, "female": female, "cat": cat, "verb": verb, "continuation": continuation}
-                    exp1 = exp1.append(nrow, ignore_index=True)
+                    rows.append(nrow)
                 except Exception:
                     traceback.print_exc()
+    exp1 = pd.DataFrame(rows, columns = ["con", "np1", "np2", "female", "cat", "verb", "continuation"])
     exp1.to_csv(f"../data/coreference{model_name.replace('/', '--')}.csv", sep=";", index=False)
     del model
     del exp1
