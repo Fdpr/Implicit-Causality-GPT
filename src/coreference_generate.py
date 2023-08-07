@@ -2,11 +2,21 @@ from transformers import pipeline, AutoTokenizer
 import pandas as pd
 import json
 from random import Random
+from torch.utils import Dataset
 from tqdm import tqdm
 import transformers
 import traceback
 
 transformers.logging.set_verbosity_error()
+
+class PromptDataset(Dataset):
+    def __init__(self, prompts):
+        self.prompts = prompts
+    def __len__(self):
+        return len(self.prompts)
+    def __getitem__(self, idx):
+        return self.prompts[idx]
+
 
 models = [
     "stefan-it/german-gpt2-larger",
@@ -42,34 +52,42 @@ for model_name in models:
     model = pipeline("text-generation", model = model_name, device = 0, device_map = "auto")
     print(model.device)
     
-    bar = tqdm(total = 2 * len(male_pairing) * 2 * len(verb_list))
     rows = []
+    n = 0
 
     for con in ["weil", "sodass"]:
-        if bar.n > 10
+        if n > 128
             break
         for np1, np2, female in male_pairing + female_pairing:
-        if bar.n > 10
+        if bar.n > 128
                 break
             for cat, verb in verb_list:
-                if bar.n > 10
+                if bar.n > 128
                     break
                 try:
-                    bar.update(1)
+                    n += 1
                     prompt = f"{np1} {verb} {np2}, {con}"
-                    continuation = model(prompt, remove_invalid_values=True, early_stopping = True, do_sample = False, diversity_penalty = .8, num_beam_groups = 5, num_beams = 10, max_new_tokens = 15)[0]["generated_text"][len(prompt):]
+                    # continuation = model(prompt, remove_invalid_values=True, early_stopping = True, do_sample = False, diversity_penalty = .8, num_beam_groups = 5, num_beams = 10, max_new_tokens = 15)[0]["generated_text"][len(prompt):]
                     # continuation = model(prompt, do_sample = True, top_k = 0, top_p = .95, max_new_tokens = 20)[0]["generated_text"][len(prompt):]
-                    nrow = {"con": con, "np1": np1, "np2": np2, "female": female, "cat": cat, "verb": verb, "continuation": continuation}
+                    nrow = {"prompt": prompt, "con": con, "np1": np1, "np2": np2, "female": female, "cat": cat, "verb": verb}
                     rows.append(nrow)
                 except Exception:
                     traceback.print_exc()
                     
-            exp1 = pd.DataFrame(rows, columns = ["con", "np1", "np2", "female", "cat", "verb", "continuation"])
-            exp1.to_csv(f"../data/coreference--{model_name.replace('/', '--')}.csv", sep=";", index=False)
-    exp1 = pd.DataFrame(rows, columns = ["con", "np1", "np2", "female", "cat", "verb", "continuation"])
+    exp1 = pd.DataFrame(rows, columns = ["con", "np1", "np2", "female", "cat", "verb", "prompt"])
+    
+    prompts = exp1["prompt"]
+    conts = []
+    
+    for out in tqdm(model(prompts, batch_size = 64), total = len(prompts):
+        print(out)
+        conts += [model_out["generated_text"] for model_out in out]
+    exp1["continuation"] = pd.Series(conts)
+    
     exp1.to_csv(f"../data/coreference--{model_name.replace('/', '--')}.csv", sep=";", index=False)
     
     del model
     del exp1
-    del bar
+    del conts
+    del prompts
     
