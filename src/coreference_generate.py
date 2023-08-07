@@ -39,18 +39,24 @@ verb_list = [(cat, verb) for cat in verbs.keys() for verb in verbs[cat]]
 for model_name in models:
        
     print(f"now loading: {model_name}")
-    model = pipeline("text-generation", model = model_name)
+    model = pipeline("text-generation", model = model_name, device = 0, device_map = "auto")
     
     bar = tqdm(total = 2 * len(male_pairing) * 2 * len(verb_list))
     rows = []
 
     for con in ["weil", "sodass"]:
+        if bar.n > 10
+            break
         for np1, np2, female in male_pairing + female_pairing:
+        if bar.n > 10
+                break
             for cat, verb in verb_list:
+                if bar.n > 10
+                    break
                 try:
                     bar.update(1)
                     prompt = f"{np1} {verb} {np2}, {con}"
-                    continuation = model(prompt, remove_invalid_values=True, early_stopping = True, do_sample = False, diversity_penalty = .8, num_beam_groups = 4, num_beams = 8, max_new_tokens = 15)[0]["generated_text"][len(prompt):]
+                    continuation = model(prompt, remove_invalid_values=True, early_stopping = True, do_sample = False, diversity_penalty = .8, num_beam_groups = 5, num_beams = 10, max_new_tokens = 15)[0]["generated_text"][len(prompt):]
                     # continuation = model(prompt, do_sample = True, top_k = 0, top_p = .95, max_new_tokens = 20)[0]["generated_text"][len(prompt):]
                     nrow = {"con": con, "np1": np1, "np2": np2, "female": female, "cat": cat, "verb": verb, "continuation": continuation}
                     rows.append(nrow)
