@@ -2,7 +2,7 @@ from transformers import pipeline, AutoTokenizer
 import pandas as pd
 import json
 from random import Random
-from torch.utils import Dataset
+from torch.utils.data import Dataset
 from tqdm import tqdm
 import transformers
 import traceback
@@ -56,13 +56,13 @@ for model_name in models:
     n = 0
 
     for con in ["weil", "sodass"]:
-        if n > 128
+        if n > 128:
             break
         for np1, np2, female in male_pairing + female_pairing:
-        if bar.n > 128
-                break
+            if n > 128:
+                    break
             for cat, verb in verb_list:
-                if bar.n > 128
+                if n > 128:
                     break
                 try:
                     n += 1
@@ -76,10 +76,10 @@ for model_name in models:
                     
     exp1 = pd.DataFrame(rows, columns = ["con", "np1", "np2", "female", "cat", "verb", "prompt"])
     
-    prompts = exp1["prompt"]
+    prompts = exp1["prompt"].tolist()
     conts = []
     
-    for out in tqdm(model(prompts, batch_size = 64remove_invalid_values=True, early_stopping = True, do_sample = False, diversity_penalty = .8, num_beam_groups = 5, num_beams = 10, max_new_tokens = 18), total = len(prompts):
+    for out in tqdm(model(prompts, batch_size = 64, remove_invalid_values=True, early_stopping = True, do_sample = False, diversity_penalty = .8, num_beam_groups = 5, num_beams = 10, max_new_tokens = 18), total = len(prompts)):
         print(out)
         conts += [model_out["generated_text"] for model_out in out]
     exp1["continuation"] = pd.Series(conts)
