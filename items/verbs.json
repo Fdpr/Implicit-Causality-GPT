@@ -1,0 +1,52 @@
+{
+	"test": {
+		"stim-exp": [
+			"beeindruckte",
+			"enttäuschte",
+			"inspirierte",
+			"langweilte",
+			"verblüffte"
+		],
+		"exp-stim": [
+			"bewunderte",
+			"fürchtete",
+			"sorgte sich um",
+			"verachtete",
+			"vertraute"
+		]
+	},
+	"train": {
+		"stim-exp": [
+			"amüsierte",
+			"ängstigte",
+			"begeisterte",
+			"bezauberte",
+			"entzückte",
+			"erschreckte",
+			"erschütterte",
+			"erstaunte",
+			"faszinierte",
+			"irritierte",
+			"schockierte",
+			"störte",
+			"überraschte",
+			"verwirrte"
+		],
+		"exp-stim": [
+			"achtete",
+			"bedauerte",
+			"bemitleidete",
+			"ekelte sich vor",
+			"hasste",
+			"liebte",
+			"misstraute",
+			"mochte",
+			"respektierte",
+			"schätzte",
+			"verabscheute",
+			"verehrte",
+			"vergötterte",
+			"vermisste"
+		]
+	}
+}
