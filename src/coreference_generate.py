@@ -3,6 +3,9 @@ import pandas as pd
 import json
 from random import Random
 from tqdm import tqdm
+import transformers
+
+transformers.logging.set_verbosity_error()
 
 models = [
     "stefan-it/german-gpt2-larger",
@@ -37,15 +40,17 @@ for model_name in models:
     model = pipeline("text-generation", model = model_name)
     exp1 = pd.DataFrame(columns = ["con", "np1", "np2", "female", "cat", "verb", "continuation"])
     
-    bar = tqdm(min=0, max= 2 * len(male_pairing) * 2 * len(verb_list))
+    bar = tqdm(total = 2 * len(male_pairing) * 2 * len(verb_list))
 
     for con in ["weil", "sodass"]:
-        if bar.value > 10:
+        if bar.n > 10:
             break
         for np1, np2, female in male_pairing + female_pairing:
-            if bar.value > 10:
-            break
+            if bar.n > 10:
+                break
             for cat, verb in verb_list:
+                if bar.n > 10:
+                break
                 try:
                     bar.update(1)
                     prompt = f"{np1} {verb} {np2}, {con}"
@@ -56,7 +61,7 @@ for model_name in models:
                     exp1 = exp1.append(nrow, ignore_index=True)
                 except Exception as e:
                     print(e)
-    exp1.to_csv(f"../data/coreference{model_name}.csv", sep=";", index=False)
+    exp1.to_csv(f"../data/coreference{model_name.replace('/', '--'}.csv", sep=";", index=False)
     del model
     del exp1
     
