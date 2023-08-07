@@ -21,12 +21,12 @@ class PromptDataset(Dataset):
 models = [
     # model name, batch_size, device, device Mapping
     ("stefan-it/german-gpt2-larger", 64, 0, None),
-    # ("malteos/bloom-6b4-clp-german", 1, 0, None), #Bloom is just too big for this.
+    # ("malteos/bloom-6b4-clp-german", 1, 0, None), #Bloom is too big
     ("ai-forever/mGPT", 4, 0, None),
     ("facebook/xglm-564M", 16, 0, None),
     ("facebook/xglm-1.7B", 4, 0, None),
-    ("facebook/xglm-2.9B", 16, -1, None),
-    ("facebook/xglm-4.5B", 1, -1, "auto")
+    # ("facebook/xglm-2.9B", 16, -1, None), # The larger models should be ran on a bigger GPU
+    # ("facebook/xglm-4.5B", 1, -1, "auto") # The larger models should be ran on a bigger GPU
 ]
 
 with open("../items/names.json", encoding="utf-8") as nfile:
@@ -70,8 +70,6 @@ for model_name, batch_size, device, device_map in models:
                 try:
                     n += 1
                     prompt = f"{np1} {verb} {np2}, {con}"
-                    # continuation = model(prompt, remove_invalid_values=True, early_stopping = True, do_sample = False, diversity_penalty = .8, num_beam_groups = 5, num_beams = 10, max_new_tokens = 15)[0]["generated_text"][len(prompt):]
-                    # continuation = model(prompt, do_sample = True, top_k = 0, top_p = .95, max_new_tokens = 20)[0]["generated_text"][len(prompt):]
                     nrow = {"prompt": prompt, "con": con, "np1": np1, "np2": np2, "female": female, "cat": cat, "verb": verb}
                     rows.append(nrow)
                 except Exception:
@@ -82,7 +80,7 @@ for model_name, batch_size, device, device_map in models:
     prompts = PromptDataset(exp1["prompt"].tolist())
     conts = []
     
-    for out in tqdm(model(prompts, batch_size = batch_size, remove_invalid_values=True, early_stopping = True, do_sample = False, diversity_penalty = .5, num_beam_groups = 5, num_beams = 10, max_new_tokens = 18), total = len(prompts)):
+    for out in tqdm(model(prompts, batch_size = batch_size, remove_invalid_values=True, early_stopping = True, do_sample = False, diversity_penalty = .6, num_beam_groups = 12, num_beams = 12, max_new_tokens = 18), total = len(prompts)):
         conts += [model_out["generated_text"] for model_out in out]
     exp1["continuation"] = pd.Series(conts)
     
