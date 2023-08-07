@@ -21,11 +21,11 @@ class PromptDataset(Dataset):
 models = [
     # model name, batch_size, device, device Mapping
     ("stefan-it/german-gpt2-larger", 64, 0, None),
-    ("malteos/bloom-6b4-clp-german", 1, 0, None),
+    # ("malteos/bloom-6b4-clp-german", 1, 0, None), #Bloom is just too big for this.
     ("ai-forever/mGPT", 4, 0, None),
     ("facebook/xglm-564M", 16, 0, None),
-    ("facebook/xglm-1.7B", 1, 0, None),
-    ("facebook/xglm-2.9B", 1, -1, "auto"),
+    ("facebook/xglm-1.7B", 4, 0, None),
+    ("facebook/xglm-2.9B", 16, -1, None),
     ("facebook/xglm-4.5B", 1, -1, "auto")
 ]
 
