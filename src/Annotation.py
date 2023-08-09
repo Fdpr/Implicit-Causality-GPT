@@ -174,7 +174,7 @@ def discourse_relation_implicit(item):
 
 # has_connector: Enthält der Prompt einen Konnektor? -> Nur Koreferenz und anaphorische Form annotieren
 def annotate(row, has_connector = False):
-    if row["type"] != "Experiment":
+    if row["type"] != "Experiment" or len(row["cont"]) == 0:
         return {}
     text = nlp(row["prompt"] + " " + row["cont"])
     commas = [token for token in text if token.text == ","]
