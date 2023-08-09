@@ -89,9 +89,12 @@ for model_name, batch_size, device, device_map in models:
     for condition in items_per_condition:
         items = deepcopy(condition)
         bar = tqdm(total = ITEMS_PER_CONDITION)
+        bar.set_description(f"Condition {items[0]['condition']}")
         item_iter = iter(items)
         rows = []
+        counter = 0
         while bar.n < ITEMS_PER_CONDITION:
+            counter += 1
             try:
                 row = next(item_iter)
                 if row["forced"] == "NP1":
@@ -112,6 +115,7 @@ for model_name, batch_size, device, device_map in models:
             except StopIteration:
                 print(f"Run out of data in condition {items[0]['condition']}")
                 break
+        print(f"Generated {counter} sentences for condition {items[0]['condition']}!")
         data += rows
 
     exp3 = pd.DataFrame(data, columns = ["condition", "type", "prompt", "cont", "NP1", "NP2", "NP1gender", "verb", "verbclass", "forced", "Koreferenz", "Anaphorische Form"])
