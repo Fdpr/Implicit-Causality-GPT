@@ -107,7 +107,7 @@ for model_name, batch_size, device, device_map in models:
                     forced_tokens = female_tokens + [tokenized_name]
                 continuation = model(row["prompt"], force_words_ids = [forced_tokens], remove_invalid_values=True, early_stopping = True, do_sample = False, num_beams = 10, max_new_tokens = 25)[0]["generated_text"]
                 row["cont"] = continuation[len(row["prompt"]) + 1:]
-                res = annotate(row, False)
+                res = annotate(row, True)
                 if res["Koreferenz"] == row["forced"]:
                     bar.update(1)
                     row.update(res)
@@ -115,7 +115,8 @@ for model_name, batch_size, device, device_map in models:
             except StopIteration:
                 print(f"Run out of data in condition {items[0]['condition']}")
                 break
-        print(f"Generated {counter} sentences for condition {items[0]['condition']}!")
+        del bar
+        print(f"Generated {counter} sentences for condition {items[0]['condition']}")
         data += rows
 
     exp3 = pd.DataFrame(data, columns = ["condition", "type", "prompt", "cont", "NP1", "NP2", "NP1gender", "verb", "verbclass", "forced", "Koreferenz", "Anaphorische Form"])
