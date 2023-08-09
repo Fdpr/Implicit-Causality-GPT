@@ -177,9 +177,11 @@ def annotate(row, has_connector = False):
     if row["type"] != "Experiment":
         return {}
     text = nlp(row["prompt"] + " " + row["cont"])
-    weil = next(token for token in text if token.text == "weil").i
-    prompt = text[:weil]
-    cont = text[weil:]
+    commas = [token for token in text if token.text == ","]
+    additional = 2 if has_connector else 1
+    comma = commas[row["prompt"].count(",") - 1].i + additional
+    prompt = text[:comma]
+    cont = text[comma:]    
     item = {"text": text, "prompt": prompt, "cont":cont, "NP1": row["NP1"], "NP2": row["NP2"],"NP1gender": row["NP1gender"]}
     if "verbclass" in row.keys():
         item["verbclass"] = row["verbclass"]
