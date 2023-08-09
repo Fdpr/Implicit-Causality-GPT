@@ -1,0 +1,206 @@
+{
+	"es": [
+		{
+			"verb": "beneidete",
+			"filler": ", ohne es offen zu zeigen",
+			"verbclass": "es"
+		},
+		{
+			"verb": "hasste",
+			"filler": " bis aufs Blut",
+			"verbclass": "es"
+		},
+		{
+			"verb": "respektierte",
+			"filler": " seit Jahrzehnten",
+			"verbclass": "es"
+		},
+		{
+			"verb": "verachtete",
+			"filler": " aufs Tiefste",
+			"verbclass": "es"
+		},
+		{
+			"verb": "vertraute",
+			"filler": " seit vielen Jahren",
+			"verbclass": "es"
+		},
+		{
+			"verb": "achtete",
+			"filler": " in hohem Grade",
+			"verbclass": "es"
+		},
+		{
+			"verb": "bewunderte",
+			"filler": " seit geraumer Zeit",
+			"verbclass": "es"
+		},
+		{
+			"verb": "liebte",
+			"filler": " von ganzem Herzen",
+			"verbclass": "es"
+		},
+		{
+			"verb": "schätzte",
+			"filler": " ganz besonders hoch",
+			"verbclass": "es"
+		},
+		{
+			"verb": "verehrte",
+			"filler": " seit mehreren Wochen",
+			"verbclass": "es"
+		},
+		{
+			"verb": "bedauerte",
+			"filler": " aus tiefstem Herzen",
+			"verbclass": "es"
+		},
+		{
+			"verb": "ekelte sich vor",
+			"filler": " schon eine ganze Weile",
+			"verbclass": "es"
+		},
+		{
+			"verb": "misstraute",
+			"filler": " seit einer ganzen Weile",
+			"verbclass": "es"
+		},
+		{
+			"verb": "sorgte sich um",
+			"filler": " seit mehreren Tagen",
+			"verbclass": "es"
+		},
+		{
+			"verb": "vergötterte",
+			"filler": " vom ersten Moment an",
+			"verbclass": "es"
+		},
+		{
+			"verb": "bemitleidete",
+			"filler": " in hohem Maße",
+			"verbclass": "es"
+		},
+		{
+			"verb": "fürchtete",
+			"filler": " ein kleines bisschen",
+			"verbclass": "es"
+		},
+		{
+			"verb": "mochte",
+			"filler": " ganz besonders gerne",
+			"verbclass": "es"
+		},
+		{
+			"verb": "verabscheute",
+			"filler": " schon seit Wochen",
+			"verbclass": "es"
+		},
+		{
+			"verb": "vermisste",
+			"filler": " ganz besonders",
+			"verbclass": "es"
+		}
+	],
+	"se": [
+		{
+			"verb": "begeisterte",
+			"filler": " auf vielfältige Art und Weise",
+			"verbclass": "se"
+		},
+		{
+			"verb": "entzückte",
+			"filler": " ganz außergewöhnlich",
+			"verbclass": "se"
+		},
+		{
+			"verb": "faszinierte",
+			"filler": " ganz und gar",
+			"verbclass": "se"
+		},
+		{
+			"verb": "schockierte",
+			"filler": " auf eine grausame Art und Weise",
+			"verbclass": "se"
+		},
+		{
+			"verb": "verwirrte",
+			"filler": " völlig unabsichtlich",
+			"verbclass": "se"
+		},
+		{
+			"verb": "amüsierte",
+			"filler": ", ohne es zu wollen",
+			"verbclass": "se"
+		},
+		{
+			"verb": "beunruhigte",
+			"filler": " seit ein paar Monaten",
+			"verbclass": "se"
+		},
+		{
+			"verb": "erfreute",
+			"filler": " mehr als je zuvor",
+			"verbclass": "se"
+		},
+		{
+			"verb": "inspirierte",
+			"filler": " auf wundersame Art und Weise",
+			"verbclass": "se"
+		},
+		{
+			"verb": "störte",
+			"filler": ", ohne es zu wollen",
+			"verbclass": "se"
+		},
+		{
+			"verb": "ängstigte",
+			"filler": " ein wenig",
+			"verbclass": "se"
+		},
+		{
+			"verb": "bezauberte",
+			"filler": " über alle Maßen",
+			"verbclass": "se"
+		},
+		{
+			"verb": "erschreckte",
+			"filler": " fast zu Tode",
+			"verbclass": "se"
+		},
+		{
+			"verb": "irritierte",
+			"filler": " schon seit Jahren",
+			"verbclass": "se"
+		},
+		{
+			"verb": "überraschte",
+			"filler": " vor ein paar Minuten",
+			"verbclass": "se"
+		},
+		{
+			"verb": "beeindruckte",
+			"filler": " in höchstem Maße",
+			"verbclass": "se"
+		},
+		{
+			"verb": "enttäuschte",
+			"filler": " sehr heftig",
+			"verbclass": "se"
+		},
+		{
+			"verb": "erstaunte",
+			"filler": " auf das Heftigste",
+			"verbclass": "se"
+		},
+		{
+			"verb": "langweilte",
+			"filler": " ganz fürchterlich",
+			"verbclass": "se"
+		},
+		{
+			"verb": "verblüffte",
+			"filler": " ganz außerordentlich",
+			"verbclass": "se"
+		}
+	]
+}

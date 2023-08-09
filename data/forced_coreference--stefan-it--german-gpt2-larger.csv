@@ -1,0 +1,143 @@
+condition;type;prompt;cont;NP1;NP2;NP1gender;verb;verbclass;forced;Koreferenz;Anaphorische Form
+2;Experiment;Annika ekelte sich vor Kevin schon eine ganze Weile, weil;"Annika ihn nicht mochte.
+Doch dann kam Kevin und";Annika;Kevin;f;ekelte sich vor;es;NP1;NP1;Eigenname
+2;Experiment;Jacqueline liebte Michael von ganzem Herzen, weil;"Jacqueline ihn so sehr liebte.
+Er war ein";Jacqueline;Michael;f;liebte;es;NP1;NP1;Eigenname
+2;Experiment;Vivien mochte Stefan ganz besonders gerne, weil;Vivien sich sehr gut in ihn hineinversetzen konnte.;Vivien;Stefan;f;mochte;es;NP1;NP1;Eigenname
+2;Experiment;Janine fürchtete Julian ein kleines bisschen, weil;"Janine ihn nicht mochte.
+Julian hatte Julians";Janine;Julian;f;fürchtete;es;NP1;NP1;Eigenname
+2;Experiment;Janine verabscheute Julian schon seit Wochen, weil;"Janine ihn nicht mochte.
+Julian hatte sich in";Janine;Julian;f;verabscheute;es;NP1;NP1;Eigenname
+2;Experiment;Natalie schätzte Andreas ganz besonders hoch, weil;"Natalie so sehr von ihm abhängig war.
+Sie war";Natalie;Andreas;f;schätzte;es;NP1;NP1;Eigenname
+2;Experiment;Vivien bedauerte Stefan aus tiefstem Herzen, weil;"Vivien ihn so sehr liebte.
+Sie war eine sehr";Vivien;Stefan;f;bedauerte;es;NP1;NP1;Eigenname
+2;Experiment;Luisa beneidete Marco, ohne es offen zu zeigen, weil;"Luisa ihn nicht mochte.
+Luisa war eine sehr";Luisa;Marco;f;beneidete;es;NP1;NP1;Eigenname
+2;Experiment;Carolin bedauerte Andre aus tiefstem Herzen, weil;"Carolin sich so sehr für ihn eingesetzt hatte.
+Sie";Carolin;Andre;f;bedauerte;es;NP1;NP1;Eigenname
+2;Experiment;Alina hasste Lars bis aufs Blut, weil;"Alina ihn nicht mochte.
+Doch dann wurde Alina";Alina;Lars;f;hasste;es;NP1;NP1;Eigenname
+3;Experiment;Sascha hasste Antonia bis aufs Blut, weil;"er sie nicht mochte.
+Er war ein großer Fan von";Sascha;Antonia;m;hasste;es;NP1;NP1;personal
+3;Experiment;Lars verabscheute Natalie schon seit Wochen, weil;"er sie nicht mochte.
+Doch als er sie in der";Lars;Natalie;m;verabscheute;es;NP1;NP1;personal
+3;Experiment;Julian verachtete Jessica aufs Tiefste, weil;"er sie nicht mochte.
+Er war ein großer Fan von";Julian;Jessica;m;verachtete;es;NP1;NP1;personal
+3;Experiment;Steffen hasste Franziska bis aufs Blut, weil;"er sie nicht mochte.
+Er wollte sie heiraten.
+";Steffen;Franziska;m;hasste;es;NP1;NP1;personal
+3;Experiment;Christopher hasste Melina bis aufs Blut, weil;"er sie nicht mochte.
+Er wollte sie nicht, weil";Christopher;Melina;m;hasste;es;NP1;NP1;personal
+3;Experiment;Timo verabscheute Lisa schon seit Wochen, weil;"er sie nicht mochte.
+Doch als er sie in der";Timo;Lisa;m;verabscheute;es;NP1;NP1;personal
+3;Experiment;Christopher verabscheute Melina schon seit Wochen, weil;"er sie für eine Hexe hielt.
+Doch als er sie";Christopher;Melina;m;verabscheute;es;NP1;NP1;personal
+3;Experiment;Christopher verachtete Melina aufs Tiefste, weil;"er sie für eine Hexe hielt.
+Melina war eine";Christopher;Melina;m;verachtete;es;NP1;NP1;personal
+3;Experiment;Niels ekelte sich vor Katharina schon eine ganze Weile, weil;"Niels sie nicht mehr mochte.
+Katharina hatte sich schon";Niels;Katharina;m;ekelte sich vor;es;NP1;NP1;Eigenname
+3;Experiment;Christopher verabscheute Hannah schon seit Wochen, weil;er sie für eine „unmoralische“ Frau hielt.;Christopher;Hannah;m;verabscheute;es;NP1;NP1;personal
+6;Experiment;Annika bezauberte Kevin über alle Maßen, weil;"Annika so eine tolle Freundin ist.
+Kevin war sehr";Annika;Kevin;f;bezauberte;se;NP1;NP1;Eigenname
+6;Experiment;Luisa amüsierte Marco, ohne es zu wollen, weil;"Luisa ihn nicht mochte.
+Marco war der Meinung,";Luisa;Marco;f;amüsierte;se;NP1;NP1;Eigenname
+6;Experiment;Jacqueline verblüffte Michael ganz außerordentlich, weil;Jacqueline sich nicht nur für die Musik interessierte, sondern;Jacqueline;Michael;f;verblüffte;se;NP1;NP1;Eigenname
+6;Experiment;Jacqueline erfreute Michael mehr als je zuvor, weil;"Jacqueline sich immer mehr in ihn verliebte.
+";Jacqueline;Michael;f;erfreute;se;NP1;NP1;Eigenname
+6;Experiment;Franziska bezauberte Stefan über alle Maßen, weil;"sie sich so gut in ihn hineinversetzen konnte.
+";Franziska;Stefan;f;bezauberte;se;NP1;NP1;personal
+6;Experiment;Vivien erstaunte Stefan auf das Heftigste, weil;Vivien sich so sehr für die Musik interessierte, dass sie;Vivien;Stefan;f;erstaunte;se;NP1;NP1;Eigenname
+6;Experiment;Janine enttäuschte Julian sehr heftig, weil;Janine sich in der ersten Halbzeit sehr gut verkauft hat.;Janine;Julian;f;enttäuschte;se;NP1;NP1;Eigenname
+6;Experiment;Janine langweilte Julian ganz fürchterlich, weil;"Janine sich so sehr in ihn verliebte.
+Jul";Janine;Julian;f;langweilte;se;NP1;NP1;Eigenname
+6;Experiment;Natalie inspirierte Andreas auf wundersame Art und Weise, weil;Natalie in der Lage war, sich selbst zu heilen.;Natalie;Andreas;f;inspirierte;se;NP1;NP1;Eigenname
+6;Experiment;Vivien ängstigte Stefan ein wenig, weil;Vivien sich nicht vorstellen konnte, dass Stefan sich in der;Vivien;Stefan;f;ängstigte;se;NP1;NP1;Eigenname
+7;Experiment;Philip irritierte Hannah schon seit Jahren, weil;"er sich nicht mehr an die Regeln halten wollte.
+Doch";Philip;Hannah;m;irritierte;se;NP1;NP1;personal
+7;Experiment;Simon amüsierte Lara, ohne es zu wollen, weil;"er sie nicht ernst nahm.
+Sie war so wütend,";Simon;Lara;m;amüsierte;se;NP1;NP1;personal
+7;Experiment;Julian amüsierte Jessica, ohne es zu wollen, weil;"er sie nicht mochte.
+Er war nicht in der Lage";Julian;Jessica;m;amüsierte;se;NP1;NP1;personal
+7;Experiment;Steffen amüsierte Franziska, ohne es zu wollen, weil;"er sie nicht ernst nahm.
+Er hatte sie nicht ernst";Steffen;Franziska;m;amüsierte;se;NP1;NP1;personal
+7;Experiment;Timo ängstigte Lisa ein wenig, weil;"er sich nicht an die Regeln halten wollte.
+Doch dann";Timo;Lisa;m;ängstigte;se;NP1;NP1;personal
+7;Experiment;Julian schockierte Jessica auf eine grausame Art und Weise, weil;"er sie mit einem Messer bedroht hatte.
+Jessica war";Julian;Jessica;m;schockierte;se;NP1;NP1;personal
+7;Experiment;Julian erschreckte Melanie fast zu Tode, weil;"er sie mit einem anderen Mann betrogen hatte.
+Er hatte";Julian;Melanie;m;erschreckte;se;NP1;NP1;personal
+7;Experiment;Christopher schockierte Melina auf eine grausame Art und Weise, weil;"er sie mit einem Messer angriff.
+Er hatte sie";Christopher;Melina;m;schockierte;se;NP1;NP1;personal
+7;Experiment;Peter schockierte Michelle auf eine grausame Art und Weise, weil;"er sie mit einem Messer angriff.
+Der Täter wurde";Peter;Michelle;m;schockierte;se;NP1;NP1;personal
+7;Experiment;Martin schockierte Luisa auf eine grausame Art und Weise, weil;"er sie mit einem Messer angriff.
+Die Polizei nahm";Martin;Luisa;m;schockierte;se;NP1;NP1;personal
+10;Experiment;Annika ekelte sich vor Kevin schon eine ganze Weile, weil;"er sich nicht mehr an die Regeln hielt.
+Doch dann";Annika;Kevin;f;ekelte sich vor;es;NP2;NP2;personal
+10;Experiment;Melanie vergötterte Marcel vom ersten Moment an, weil;"er sich mit ihm identifizieren konnte.
+Er war ein sehr";Melanie;Marcel;f;vergötterte;es;NP2;NP2;personal
+10;Experiment;Katharina sorgte sich um Martin seit mehreren Tagen, weil;"er sich nicht mehr an die Regeln halten wollte.
+Er";Katharina;Martin;f;sorgte sich um;es;NP2;NP2;personal
+10;Experiment;Sarah fürchtete Benjamin ein kleines bisschen, weil;"er sich nicht so gut mit ihm verstand.
+Doch Benjamin";Sarah;Benjamin;f;fürchtete;es;NP2;NP2;personal
+10;Experiment;Jessica bedauerte Benjamin aus tiefstem Herzen, weil;"er sich so sehr für ihn eingesetzt habe.
+„Ich";Jessica;Benjamin;f;bedauerte;es;NP2;NP2;personal
+10;Experiment;Luisa achtete Marco in hohem Grade, weil;er sich in den letzten Jahren immer wieder in den Vordergrund spielte;Luisa;Marco;f;achtete;es;NP2;NP2;personal
+10;Experiment;Jacqueline vermisste Michael ganz besonders, weil;"er sich so sehr für sie interessiert hatte.
+Sie war";Jacqueline;Michael;f;vermisste;es;NP2;NP2;personal
+10;Experiment;Jacqueline liebte Michael von ganzem Herzen, weil;"er ein sehr guter Mensch war.
+Er war ein sehr";Jacqueline;Michael;f;liebte;es;NP2;NP2;personal
+10;Experiment;Franziska ekelte sich vor Stefan schon eine ganze Weile, weil;"er sich nicht mehr an die Regeln hielt.
+Doch dann";Franziska;Stefan;f;ekelte sich vor;es;NP2;NP2;personal
+10;Experiment;Vivien mochte Stefan ganz besonders gerne, weil;"er sich in ihm so sehr wohl fühlt.
+Er ist";Vivien;Stefan;f;mochte;es;NP2;NP2;personal
+11;Experiment;Benjamin ekelte sich vor Alexandra schon eine ganze Weile, weil;"sie nicht wusste, wie sie sich verhalten sollte.
+Sie";Benjamin;Alexandra;m;ekelte sich vor;es;NP2;NP2;personal
+11;Experiment;Lars vergötterte Natalie vom ersten Moment an, weil;"sie sich in ihn verliebt hatte.
+Sie war eine sehr";Lars;Natalie;m;vergötterte;es;NP2;NP2;personal
+11;Experiment;Philip sorgte sich um Hannah seit mehreren Tagen, weil;"sie sich nicht mehr an die Schule traut.
+Als sie";Philip;Hannah;m;sorgte sich um;es;NP2;NP2;personal
+11;Experiment;Daniel fürchtete Jacqueline ein kleines bisschen, weil;"sie sich nicht so gut mit ihm verstand.
+Doch er";Daniel;Jacqueline;m;fürchtete;es;NP2;NP2;personal
+11;Experiment;Marcel bedauerte Denise aus tiefstem Herzen, weil;"sie sich so sehr gewünscht hatte.
+„Ich habe mich";Marcel;Denise;m;bedauerte;es;NP2;NP2;personal
+11;Experiment;Simon achtete Lara in hohem Grade, weil;sie sich in den letzten Jahren immer wieder in der Öffentlichkeit gezeigt;Simon;Lara;m;achtete;es;NP2;NP2;personal
+11;Experiment;Felix vermisste Janine ganz besonders, weil;"sie sich so sehr in ihn verliebt hatte.
+Doch dann";Felix;Janine;m;vermisste;es;NP2;NP2;personal
+11;Experiment;Felix liebte Janine von ganzem Herzen, weil;"sie sich in ihr Herz verliebt hatte.
+Sie war eine";Felix;Janine;m;liebte;es;NP2;NP2;personal
+11;Experiment;Marcus ekelte sich vor Vivien schon eine ganze Weile, weil;"sie nicht mehr wusste, was sie tun sollte.
+Sie";Marcus;Vivien;m;ekelte sich vor;es;NP2;NP2;personal
+11;Experiment;Paul mochte Laura ganz besonders gerne, weil;"sie sich in ihr Herz verliebt hat.
+Sie hat sich";Paul;Laura;m;mochte;es;NP2;NP2;personal
+14;Experiment;Melanie überraschte Marcel vor ein paar Minuten, weil;"er sich in der ersten Halbzeit verletzt hatte.
+Die beiden";Melanie;Marcel;f;überraschte;se;NP2;NP2;personal
+14;Experiment;Katharina irritierte Martin schon seit Jahren, weil;er sich in der Vergangenheit immer wieder mit der Frage beschäftigt hat;Katharina;Martin;f;irritierte;se;NP2;NP2;personal
+14;Experiment;Sarah enttäuschte Benjamin sehr heftig, weil;"er sich in der ersten Halbzeit nicht durchsetzen konnte.
+In";Sarah;Benjamin;f;enttäuschte;se;NP2;NP2;personal
+14;Experiment;Jessica ängstigte Benjamin ein wenig, weil;"er nicht wusste, was er tun sollte.
+Er war";Jessica;Benjamin;f;ängstigte;se;NP2;NP2;personal
+14;Experiment;Luisa amüsierte Marco, ohne es zu wollen, weil;"er sich nicht an die Regeln hielt.
+Marco, der";Luisa;Marco;f;amüsierte;se;NP2;NP2;personal
+14;Experiment;Jacqueline verblüffte Michael ganz außerordentlich, weil;"er sich so sehr für seine Frau interessierte.
+Michael war";Jacqueline;Michael;f;verblüffte;se;NP2;NP2;personal
+14;Experiment;Jacqueline erfreute Michael mehr als je zuvor, weil;"er sich immer mehr von ihr abwandte.
+Michael";Jacqueline;Michael;f;erfreute;se;NP2;NP2;personal
+14;Experiment;Vivien erstaunte Stefan auf das Heftigste, weil;er sich nicht nur mit der Frage auseinandergesetzt hatte, ob;Vivien;Stefan;f;erstaunte;se;NP2;NP2;personal
+14;Experiment;Anna bezauberte Steffen über alle Maßen, weil;er sich mit seiner Musik und seinem Spiel sehr wohl fühlte.;Anna;Steffen;f;bezauberte;se;NP2;NP2;personal
+14;Experiment;Anna erfreute Philip mehr als je zuvor, weil;er sich in der Vergangenheit immer wieder mit ihm getroffen hatte.;Anna;Philip;f;erfreute;se;NP2;NP2;personal
+15;Experiment;Benjamin bezauberte Alexandra über alle Maßen, weil;"sie sich so gut in ihn hineinversetzen konnte.
+";Benjamin;Alexandra;m;bezauberte;se;NP2;NP2;personal
+15;Experiment;Lars überraschte Natalie vor ein paar Minuten, weil;sie sich nicht mehr an die Zeit erinnern konnte, als sie;Lars;Natalie;m;überraschte;se;NP2;NP2;personal
+15;Experiment;Daniel enttäuschte Jacqueline sehr heftig, weil;"sie nicht wusste, was sie tun sollte.
+""Ich";Daniel;Jacqueline;m;enttäuschte;se;NP2;NP2;personal
+15;Experiment;Marcel ängstigte Denise ein wenig, weil;"sie nicht wusste, was sie tun sollte.
+„Ich";Marcel;Denise;m;ängstigte;se;NP2;NP2;personal
+15;Experiment;Felix verblüffte Janine ganz außerordentlich, weil;sie nicht nur eine sehr gute Schwimmerin war, sondern auch;Felix;Janine;m;verblüffte;se;NP2;NP2;personal
+15;Experiment;Felix erfreute Janine mehr als je zuvor, weil;sie sich mit ihrem neuen Album „The Best of Janine;Felix;Janine;m;erfreute;se;NP2;NP2;personal
+15;Experiment;Marcus bezauberte Vivien über alle Maßen, weil;sie sich so sehr für die Musik und das Leben der Menschen;Marcus;Vivien;m;bezauberte;se;NP2;NP2;personal
+15;Experiment;Paul erstaunte Laura auf das Heftigste, weil;sie sich nicht nur für die Kinder, sondern auch für die;Paul;Laura;m;erstaunte;se;NP2;NP2;personal
+15;Experiment;Sebastian bezauberte Annika über alle Maßen, weil;"sie sich so gut in ihn hineinversetzen konnte.
+";Sebastian;Annika;m;bezauberte;se;NP2;NP2;personal
+15;Experiment;Julian enttäuschte Jessica sehr heftig, weil;sie sich nicht so gut in die Gruppe hineinversetzen konnte;Julian;Jessica;m;enttäuschte;se;NP2;NP2;personal
