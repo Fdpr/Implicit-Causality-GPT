@@ -13,7 +13,7 @@ from itertools import product
 
 transformers.logging.set_verbosity_error()
 
-ITEMS_PER_CONDITION = 5
+ITEMS_PER_CONDITION = 500
 
 class PromptDataset(Dataset):
     def __init__(self, prompts):
@@ -80,8 +80,8 @@ for model_name, batch_size, device, device_map in models:
     model.tokenizer.pad_token_id = model.model.config.eos_token_id
     model.tokenizer.padding_side = "left"
     
-    male_tokens = list(map(model.tokenizer.encode, [" er", " dieser", " jener", " der"]))
-    female_tokens = list(map(model.tokenizer.encode, [" sie", " diese", " jene", " die"]))
+    male_tokens = list(map(model.tokenizer.encode, [" er", " dieser", " jener"]))
+    female_tokens = list(map(model.tokenizer.encode, [" sie", " diese", " jene"]))
     
     data = []
 
