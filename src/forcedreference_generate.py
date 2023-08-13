@@ -9,11 +9,11 @@ import traceback
 from Annotation import annotate
 from copy import deepcopy
 import itertools
-from itertools import permutations
+from itertools import product
 
 transformers.logging.set_verbosity_error()
 
-ITEMS_PER_CONDITION = 500
+ITEMS_PER_CONDITION = 1000
 
 class PromptDataset(Dataset):
     def __init__(self, prompts):
@@ -23,15 +23,6 @@ class PromptDataset(Dataset):
     def __getitem__(self, idx):
         return self.prompts[idx]
         
-def combine(list1, list2, my_bool):
-    unique_combinations = []
-    permut = permutations(list_1, len(list_2))
-    for comb in permut:
-        zipped = zip(comb, list_2)
-        unique_combinations.append(list(zipped))
-    unique_combinations = [item for row in unique_combinations for item in row]
-    return [(name1, name2, my_bool) for (name1, name2) in unique_combinations]
-
 models = [
     ("facebook/xglm-1.7B", 4, 0, None),
     ("stefan-it/german-gpt2-larger", 64, 0, None),
@@ -52,11 +43,11 @@ with open("../items/verbs_forced_reference.json", encoding="utf-8") as nfile:
 es_verbs = verbdict["es"]
 se_verbs = verbdict["se"]
 
-male_pairing = combine(male_names, female_names, False)
-female_pairing = combine(female_names, male_names, True)
+male_pairing = list(product(male_names, female_names, [False]))
+female_pairing = list(product(female_names, male_names, [True]))
 Random(42).shuffle(male_pairing)
 Random(84).shuffle(female_pairing)
-
+print(len(male_pairing))
 conditions = [
     (2,  es_verbs, female_pairing, "NP1"),
     (3,  es_verbs,   male_pairing, "NP1"),
