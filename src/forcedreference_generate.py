@@ -13,7 +13,7 @@ from itertools import product
 
 transformers.logging.set_verbosity_error()
 
-ITEMS_PER_CONDITION = 1000
+ITEMS_PER_CONDITION = 5
 
 class PromptDataset(Dataset):
     def __init__(self, prompts):
@@ -47,7 +47,7 @@ male_pairing = list(product(male_names, female_names, [False]))
 female_pairing = list(product(female_names, male_names, [True]))
 Random(42).shuffle(male_pairing)
 Random(84).shuffle(female_pairing)
-print(len(male_pairing))
+
 conditions = [
     (2,  es_verbs, female_pairing, "NP1"),
     (3,  es_verbs,   male_pairing, "NP1"),
