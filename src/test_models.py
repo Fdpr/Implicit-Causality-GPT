@@ -27,6 +27,6 @@ for model_name in models:
         ]
     model = pipeline("text-generation", model = model_name)
     # print(model("Ich bin ein Sprachmodell, also", remove_invalid_values=True, early_stopping = True, do_sample = False, diversity_penalty = .6, num_beam_groups = 5, num_beams = 10, max_new_tokens = 20))
-    print(model("Andra überraschte Malte, weil", remove_invalid_values=True, num_return_sequences = 1, no_repeat_ngrams = 2, early_stopping = True, force_words_ids=force_words_ids, do_sample = False, num_beams = 10, max_new_tokens = 20))
+    print(model("Andra überraschte Malte, weil", remove_invalid_values=True, num_return_sequences = 1, no_repeat_ngram_size = 2, early_stopping = True, force_words_ids=force_words_ids, do_sample = False, num_beams = 10, max_new_tokens = 20))
     del model
     del tokenizer
