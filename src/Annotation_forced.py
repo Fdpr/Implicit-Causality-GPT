@@ -4,11 +4,9 @@
 import pandas as pd
 import spacy
 import urllib
-from tqdm.auto import tqdm
 import warnings
 
 warnings.filterwarnings('ignore')
-tqdm.pandas()
 nlp = spacy.load("de_dep_news_trf")
 
 
@@ -30,13 +28,13 @@ def coreference(item):
         subject = next(token for token in item["cont"] if token.dep_ == "sb")
         form = ""
         coreference = ""
-        if subject.text in ["er", "sie"]:
+        if subject.text.lower() in ["er", "sie"]:
             form = "personal"
-        elif subject.text in ["dieser", "diese"]:
+        elif subject.text.lower() in ["dieser", "diese"]:
             form = "demonstrativ"
-        elif subject.text in [item["NP1"], item["NP2"]]:
+        elif subject.text.lower() in [item["NP1"].lower(), item["NP2"].lower()]:
             form = "Eigenname"
-        elif subject.text in ["der", "welcher", "die", "welche"]:
+        elif subject.text.lower() in ["der", "welcher", "die", "welche"]:
             form = "relativ"
         if form != "":
             if "Plur" in subject.morph.get("Number"):
@@ -87,6 +85,12 @@ def cont_type(item):
     if tag == "PRELS" or tag == "PRELAT":
         return "Relativsatz"
     elif tag == "APPR" or tag == "APPRART":
+        try:
+            subject_index = next(token for token in item["cont"] if token.dep_ == "sb").i
+            verb_index = next(token for token in item["cont"] if "Fin" in token.morph.get("VerbForm")).i
+            return "Hauptsatz"
+        except StopIteration:
+            pass
         return "PP"
     elif tag == "KOUS" or tag == "KOUI":
         return "subordinierend"
@@ -153,6 +157,7 @@ def discourse_relation_implicit(item):
 
 
 # # Annotation
+# # DO NOT USE FOR GENERAL ANNOTATION. CHANGES HAVE BEEN MADE FOR FORCED REFERENCE AND STUFF!!!!!!!!
 # 
 # Folgendes wird annotiert:
 # 
@@ -169,12 +174,14 @@ def discourse_relation_implicit(item):
 
 # has_connector: Enthält der Prompt einen Konnektor? -> Nur Koreferenz und anaphorische Form annotieren
 def annotate(row, has_connector = False):
-    if row["type"] != "Experiment":
+    if row["type"] != "Experiment" or len(row["cont"]) == 0:
         return {}
-    text = nlp((row["prompt"] + " " + row["cont"]).split(".")[0])
-    comma = next(token for token in text if token.text == ",").i
-    prompt = text[:comma+1]
-    cont = text[comma+1:]
+    text = nlp(row["prompt"] + " " + row["cont"])
+    commas = [token for token in text if token.text == ","]
+    additional = 2 if has_connector else 1
+    comma = commas[row["prompt"].count(",") - 1].i + additional
+    prompt = text[:comma]
+    cont = text[comma:]    
     item = {"text": text, "prompt": prompt, "cont":cont, "NP1": row["NP1"], "NP2": row["NP2"],"NP1gender": row["NP1gender"]}
     if "verbclass" in row.keys():
         item["verbclass"] = row["verbclass"]
@@ -210,7 +217,7 @@ def do_annotation(df, has_connector = False):
     """
     
     index = df.index
-    res = pd.DataFrame.from_records(list(df.progress_apply(lambda row: annotate(row, has_connector), axis=1)))
+    res = pd.DataFrame.from_records(list(df.apply(lambda row: annotate(row, has_connector), axis=1)))
     res.index = df.index
     return pd.concat([df, res], axis=1)
 

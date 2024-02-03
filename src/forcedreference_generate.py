@@ -6,7 +6,7 @@ from torch.utils.data import Dataset
 from tqdm import tqdm
 import transformers
 import traceback
-from Annotation import annotate
+from Annotation_forced import do_annotation
 from copy import deepcopy
 import itertools
 from itertools import product
@@ -29,11 +29,12 @@ models = [
     ("ai-forever/mGPT", 4, 0, None),
     ("facebook/xglm-564M", 16, 0, None),
     ("facebook/xglm-1.7B", 4, 0, None),
-    # ("facebook/xglm-2.9B", 16, -1, None), # The larger models should be ran on a bigger GPU
-    # ("facebook/xglm-4.5B", 1, -1, "auto"), # The larger models should be ran on a bigger GPU
-    ("malteos/bloom-350m-german", 32, None),
+    # ("facebook/xglm-2.9B", 16, -1, None), # The larger models should be ran on a bigger GPU 
+    # ("facebook/xglm-4.5B", 1, -1, None), # The larger models should be ran on a bigger GPU
+    # ("facebook/xglm-7.5B", 1, -1, None), # The larger models should be ran on a bigger GPU
+    ("malteos/bloom-350m-german", 32, 0, None),
     ("malteos/bloom-1b5-clp-german", 4, 0, None)
-    # ("malteos/bloom-6b4-clp-german", 1, 0, None), # The larger models should be ran on a bigger GPU
+    # ("malteos/bloom-6b4-clp-german", 1, 0, None) # The larger models should be ran on a bigger GPU
 ]
 
 with open("../items/names.json", encoding="utf-8") as nfile:
@@ -62,6 +63,25 @@ conditions = [
 ]
 
 items_per_condition = []
+
+def make_constraint_function(tokenizer, female):
+    weil = tokenizer.encode(", weil")[-2:]
+    names = female_names if female else male_names
+    pronouns = [" sie", " diese", " jense"] if female else [" er", " dieser", " jener"] 
+    tokens = list(map(model.tokenizer.encode, list(map(lambda name: " " + name, names)) + pronouns))
+    twos = [items for items in tokens if len(items) > 1]
+    twos_one = [item[0] for item in twos]
+    twos_two = [item[1] for item in twos]
+    all_tokens = list(range(tokenizer.vocab_size))
+    tokens = [item[0] for item in tokens]
+    def constrainer(batch_id, input_tokens):
+        if (input_tokens[-2] == weil[-2]) and (input_tokens[-1] == weil[-1]):
+            return tokens
+        elif (input_tokens[-3] == weil[-2]) and (input_tokens[-2] == weil[-1]) and (input_tokens[-1] in twos_one):
+            return [twos_two[twos_one.index(input_tokens[-1])]]
+        else:
+            return all_tokens
+    return constrainer
   
 for condition, verbs, pairing, forced_reference in conditions:
     rows = []
@@ -76,57 +96,47 @@ for condition, verbs, pairing, forced_reference in conditions:
     items_per_condition.append(rows)
 
 for model_name, batch_size, device, device_map in models:
-       
     print(f"now loading: {model_name}")
-    model = pipeline("text-generation", model = model_name, device = device, device_map = device_map)
+    model = pipeline("text-generation", model = model_name)
     model.tokenizer.pad_token_id = model.model.config.eos_token_id
-    model.tokenizer.padding_side = "left"
-    
-    male_tokens = list(map(model.tokenizer.encode, [" er", " dieser", " jener"]))
-    female_tokens = list(map(model.tokenizer.encode, [" sie", " diese", " jene"]))
-    
+    model.tokenizer.padding_side = "left"    
     data = []
-
     for condition in items_per_condition:
         items = deepcopy(condition)
+        constraint_function = make_constraint_function(model.tokenizer, False)
+        if ((condition[0]["forced"] == "NP1") and (condition[0]["NP1gender"] == "f")) or ((condition[0]["forced"] == "NP2") and (condition[0]["NP1gender"] == "m")):
+            constraint_function = make_constraint_function(model.tokenizer, True)
         bar = tqdm(total = ITEMS_PER_CONDITION)
         bar.set_description(f"Condition {items[0]['condition']}")
-        item_iter = iter(items)
-        rows = []
+        result = []
         counter = 0
         while bar.n < ITEMS_PER_CONDITION:
             counter += 1
-            try:
-                row = next(item_iter)
-                if row["forced"] == "NP1":
-                    tokenized_name = model.tokenizer.encode(f" {row['NP1']}")
-                else:
-                    tokenized_name = model.tokenizer.encode(f" {row['NP2']}")
-                if (row["NP1gender"] == "m" and row["forced"] == "NP1") or (row["NP1gender"] == "f" and row["forced"] == "NP2"):
-                    forced_tokens = male_tokens + [tokenized_name]
-                else:
-                    forced_tokens = female_tokens + [tokenized_name]
-                continuation = model(row["prompt"], force_words_ids = [forced_tokens], remove_invalid_values=True, early_stopping = True, do_sample = False, num_beams = 10, max_new_tokens = 25)[0]["generated_text"]
-                row["cont"] = continuation[len(row["prompt"]) + 1:]
-                res = annotate(row, True)
-                if res["Koreferenz"] == row["forced"]:
-                    bar.update(1)
-                    row.update(res)
-                    rows.append(row)
-            except StopIteration:
-                print(f"Run out of data in condition {items[0]['condition']}")
+            if len(items) >= batch_size:
+                rows = pd.DataFrame(items[:batch_size])
+                items = items[batch_size:]
+                prompts = rows["prompt"].to_list()
+                continuations = model(prompts, batch_size=batch_size, prefix_allowed_tokens_fn=constraint_function, remove_invalid_values=True, early_stopping = True, do_sample = False, diversity_penalty = .6, num_beam_groups = 10, num_beams = 10, max_new_tokens = 20)
+                continuations = [cont[0]["generated_text"] for cont in continuations]
+                continuations = list(map(lambda zipped: zipped[1][len(zipped[0])+1:], zip(prompts, continuations)))
+                rows["cont"] = continuations
+                res = do_annotation(rows, True)
+                res = res[res["Koreferenz"] == res["forced"]]
+                result += res.values.tolist()
+                bar.update(len(res))
+            else:
+                print(f"Run out of data in condition {condition[0]['condition']}")
                 break
         del bar
         print(f"Generated {counter} sentences for condition {items[0]['condition']}")
-        data += rows
+        data += result
 
-    exp3 = pd.DataFrame(data, columns = ["condition", "type", "prompt", "cont", "NP1", "NP2", "NP1gender", "verb", "verbclass", "forced", "Koreferenz", "Anaphorische Form"])
+    exp3 = pd.DataFrame(data, columns = ["condition", "type", "prompt", "NP1", "NP2", "NP1gender", "verb", "verbclass", "forced", "cont", "Koreferenz", "Anaphorische Form"])
     exp3.to_csv(f"../data/forced_coreference--{model_name.replace('/', '--')}.csv", sep=";", index=False)
     
     del model
     del exp3
     del rows
     del items
-    
     
     # FIX ROW BUG
