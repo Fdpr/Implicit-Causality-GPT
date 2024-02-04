@@ -24,17 +24,17 @@ class PromptDataset(Dataset):
         return self.prompts[idx]
         
 models = [
-    # model name, batch_size, device, device Mapping
-    ("stefan-it/german-gpt2-larger", 64, 0, None),
-    ("ai-forever/mGPT", 4, 0, None),
-    ("facebook/xglm-564M", 16, 0, None),
-    ("facebook/xglm-1.7B", 4, 0, None),
-    # ("facebook/xglm-2.9B", 16, -1, None), # The larger models should be ran on a bigger GPU 
-    # ("facebook/xglm-4.5B", 1, -1, None), # The larger models should be ran on a bigger GPU
-    # ("facebook/xglm-7.5B", 1, -1, None), # The larger models should be ran on a bigger GPU
-    ("malteos/bloom-350m-german", 32, 0, None),
-    ("malteos/bloom-1b5-clp-german", 4, 0, None)
-    # ("malteos/bloom-6b4-clp-german", 1, 0, None) # The larger models should be ran on a bigger GPU
+    # model name, batch_size, device, device Mapping, is_sentencepiece
+    ("stefan-it/german-gpt2-larger", 64, 0, None, False),
+    ("ai-forever/mGPT", 4, 0, None, False),
+    ("facebook/xglm-564M", 32, 0, None, True),
+    ("facebook/xglm-1.7B", 8, 0, None, True),
+    # ("facebook/xglm-2.9B", 16, -1, None, True), # The larger models should be ran on a bigger GPU 
+    # ("facebook/xglm-4.5B", 1, -1, None, True), # The larger models should be ran on a bigger GPU
+    # ("facebook/xglm-7.5B", 1, -1, None, True), # The larger models should be ran on a bigger GPU
+    ("malteos/bloom-350m-german", 32, 0, None, False),
+    ("malteos/bloom-1b5-clp-german", 4, 0, None, False)
+    # ("malteos/bloom-6b4-clp-german", 1, 0, None, False) # The larger models should be ran on a bigger GPU
 ]
 
 with open("../items/names.json", encoding="utf-8") as nfile:
@@ -64,11 +64,16 @@ conditions = [
 
 items_per_condition = []
 
-def make_constraint_function(tokenizer, female):
+def make_constraint_function(tokenizer, female, is_sentencepiece):
     weil = tokenizer.encode(", weil")[-2:]
     names = female_names if female else male_names
-    pronouns = [" sie", " diese", " jense"] if female else [" er", " dieser", " jener"] 
-    tokens = list(map(model.tokenizer.encode, list(map(lambda name: " " + name, names)) + pronouns))
+    if is_sentencepiece:
+        pronouns = ["sie", "diese", "jense"] if female else ["er", "dieser", "jener"]
+        tokens = list(map(tokenizer.encode, names + pronouns))
+        tokens = [toks[1:] for toks in tokens]
+    else:
+        pronouns = [" sie", " diese", " jense"] if female else [" er", " dieser", " jener"]
+        tokens = list(map(tokenizer.encode, list(map(lambda name: " " + name, names)) + pronouns))
     twos = [items for items in tokens if len(items) > 1]
     twos_one = [item[0] for item in twos]
     twos_two = [item[1] for item in twos]
@@ -95,7 +100,7 @@ for condition, verbs, pairing, forced_reference in conditions:
     Random(168).shuffle(rows)
     items_per_condition.append(rows)
 
-for model_name, batch_size, device, device_map in models:
+for model_name, batch_size, device, device_map, is_sentencepiece in models:
     print(f"now loading: {model_name}")
     model = pipeline("text-generation", model = model_name)
     model.tokenizer.pad_token_id = model.model.config.eos_token_id
@@ -103,9 +108,9 @@ for model_name, batch_size, device, device_map in models:
     data = []
     for condition in items_per_condition:
         items = deepcopy(condition)
-        constraint_function = make_constraint_function(model.tokenizer, False)
+        constraint_function = make_constraint_function(model.tokenizer, False, is_sentencepiece)
         if ((condition[0]["forced"] == "NP1") and (condition[0]["NP1gender"] == "f")) or ((condition[0]["forced"] == "NP2") and (condition[0]["NP1gender"] == "m")):
-            constraint_function = make_constraint_function(model.tokenizer, True)
+            constraint_function = make_constraint_function(model.tokenizer, True, is_sentencepiece)
         bar = tqdm(total = ITEMS_PER_CONDITION)
         bar.set_description(f"Condition {items[0]['condition']}")
         result = []
