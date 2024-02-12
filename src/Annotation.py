@@ -153,9 +153,9 @@ def discourse_relation_explicit_corrected(item):
     marker = item["cont"][0].text.lower()
     if "verbclass" in item.keys():
         cat = item["verbclass"]
-        if (marker == "indem" or marker == "als") and cat == "se":
+        if (marker == "indem" or marker == "als") and (cat in ["se", "stim-exp"]):
             return "Contingency.Cause.Reason"
-        elif (marker == "der" or marker == "die" or marker == "welcher" or marker == "welche") and (cat == "se" or cat == "es"):
+        elif (marker == "der" or marker == "die" or marker == "welcher" or marker == "welche") and (cat in ["se", "stim-exp", "es", "exp-stim"]):
             return "Contingency.Cause.Reason"
     return discourse_relation_explicit(item)
 
