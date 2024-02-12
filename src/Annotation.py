@@ -25,9 +25,9 @@ nlp = spacy.load("de_dep_news_trf")
 # #### Anaphorische Koreferenz
 
 def coreference(item):
+    if (len(item["cont"]) > 0) and (item["cont"][0].tag_ == "KOUI"):
+        return ("NP1", "elliptisch")
     try:
-        if item["cont"][0].tag_ == "KOUI":
-            return ("NP1", "elliptisch")
         subject = next(token for token in item["cont"] if token.dep_ == "sb")
         form = ""
         coreference = ""
@@ -54,7 +54,7 @@ def coreference(item):
                     else:
                         coreference = "NP2"
         return (coreference, form)
-    except StopIteration, IndexError:
+    except StopIteration:
         return ("", "")
 
 
