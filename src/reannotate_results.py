@@ -7,6 +7,7 @@ for result_file in [file for file in listdir("../data") if file.startswith("cohe
     print(f" Now annotating {result_file}")
     df = pd.read_csv(result_file, sep=";")
     df = df[["con", "NP1", "NP2", "female", "verbclass", "verb", "prompt", "cont", "type", "NP1gender"]]
+    df["cont"] = df["cont"].astype(str)
     do_annotation(df, False).to_csv(result_file[:-4] + "_annotated.csv", index=False, sep=";") 
 
 for result_file in [file for file in listdir("../data") if file.startswith("coreference") and file.endswith(".csv")]:
@@ -14,5 +15,6 @@ for result_file in [file for file in listdir("../data") if file.startswith("core
     print(f" Now annotating {result_file}")
     df = pd.read_csv(result_file, sep=";")
     df = df[["con", "NP1", "NP2", "female", "verbclass", "verb", "prompt", "cont", "type", "NP1gender"]]
+    df["cont"] = df["cont"].astype(str)
     do_annotation(df, True).to_csv(result_file[:-4] + "_annotated.csv", index=False, sep=";") 
     
