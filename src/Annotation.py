@@ -137,7 +137,7 @@ goal = ("damit ", "um ")
 discourse_markers[goal] = "Contingency.Purpose.Arg2-as-goal"
 
 def discourse_relation_explicit(item):
-    if len(item["cont"]) > 0:
+    if len(item["cont"]) == 0:
         return ""
     marker = item["cont"][0]
     if marker.tag_ in ["KOUI", "KON", "KOUS"]:
@@ -148,7 +148,7 @@ def discourse_relation_explicit(item):
     return ""
 
 def discourse_relation_explicit_corrected(item):
-    if len(item["cont"]) > 0:
+    if len(item["cont"]) == 0:
         return ""
     marker = item["cont"][0].text.lower()
     if "verbclass" in item.keys():
