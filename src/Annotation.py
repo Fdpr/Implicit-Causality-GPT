@@ -1,5 +1,6 @@
 #!/usr/bin/env python
 # coding: utf-8
+# AKTUELLE VERSION STAND 2024/02/12
 
 import pandas as pd
 import spacy
@@ -24,9 +25,9 @@ nlp = spacy.load("de_dep_news_trf")
 # #### Anaphorische Koreferenz
 
 def coreference(item):
-    if item["cont"][0].tag_ == "KOUI":
-        return ("NP1", "elliptisch")
     try:
+        if item["cont"][0].tag_ == "KOUI":
+            return ("NP1", "elliptisch")
         subject = next(token for token in item["cont"] if token.dep_ == "sb")
         form = ""
         coreference = ""
@@ -53,7 +54,7 @@ def coreference(item):
                     else:
                         coreference = "NP2"
         return (coreference, form)
-    except StopIteration:
+    except StopIteration, IndexError:
         return ("", "")
 
 
