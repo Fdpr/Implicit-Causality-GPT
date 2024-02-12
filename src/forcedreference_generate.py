@@ -116,7 +116,7 @@ for model_name, batch_size, device, device_map, is_sentencepiece in models:
         result = []
         counter = 0
         while bar.n < ITEMS_PER_CONDITION:
-            counter += 1
+            counter += batch_size
             if len(items) >= batch_size:
                 rows = pd.DataFrame(items[:batch_size])
                 items = items[batch_size:]
