@@ -79,6 +79,14 @@ def relative_coreference(item):
             else:
                 return "NP2"
     return ""
+    
+    
+# #### Diskursmarker
+
+def discourse_marker(item):
+    if len(item["cont"]) == 0:
+        return ""
+    return str(item["cont"][0]
 
 
 # #### Fortsetzungstyp
@@ -153,9 +161,12 @@ def discourse_relation_explicit_corrected(item):
     marker = item["cont"][0].text.lower()
     if "verbclass" in item.keys():
         cat = item["verbclass"]
-        if (marker == "indem" or marker == "als") and (cat in ["se", "stim-exp"]):
+        if (marker == "indem") and (cat in ["se", "stim-exp"]):
             return "Contingency.Cause.Reason"
-        elif (marker == "der" or marker == "die" or marker == "welcher" or marker == "welche") and (cat in ["se", "stim-exp", "es", "exp-stim"]):
+        # Keine "als"-Korrektur
+        # if (marker == "als") and (cat in ["se", "stim-exp"]):
+        #     return "Contingency.Cause.Reason"
+        elif (cat in ["es", "exp-stim"]) and (marker in ["der", "welcher", "die", "welche"]) and (item["Koreferenz"] == "NP2"):
             return "Contingency.Cause.Reason"
     return discourse_relation_explicit(item)
 
@@ -167,6 +178,7 @@ def discourse_relation_implicit(item):
 # 
 # Folgendes wird annotiert:
 # 
+# - **Diskursmarker**: Das erste Token der Fortsetzung, was üblicherweise der Diskursmarker ist. Es wird nicht geprüft, ob es tatsächlich einer ist.
 # - **Diskursrelation Explizit**: Erkennt ausgewählte PDTB-Relationen anhand des Konnektors nach dem Komma.
 # - **Diskursrelation Explizit SE/ES-Korrektur**: Wenn Informationen über ES/SE-Kategorie des Verbs vorhanden sind, wird die explizite Annotation für manche Konnektoren angepasst. Zum Beispiel: als -> Synchronous bei ES-Verben, aber als -> Reason bei SE-Verben
 # - **Diskursrelation Implizit**: TODO, Erkennung von Diskursrelationen mittels BERT-Klassifizierung
@@ -192,6 +204,7 @@ def annotate(row, has_connector = False):
     result = dict()
     result["Koreferenz"], result["Anaphorische Form"] = coreference(item)
     if not has_connector:
+        results["Diskursmarker"] = discourse_marker(item)
         result["Diskursrelation Explizit"] = discourse_relation_explicit(item)
         if "verbclass" in row.keys():
             item["verbclass"] = row["verbclass"]
