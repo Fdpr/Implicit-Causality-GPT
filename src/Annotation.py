@@ -86,7 +86,7 @@ def relative_coreference(item):
 def discourse_marker(item):
     if len(item["cont"]) == 0:
         return ""
-    return str(item["cont"][0]
+    return str(item["cont"][0])
 
 
 # #### Fortsetzungstyp
@@ -155,7 +155,7 @@ def discourse_relation_explicit(item):
                 return discourse_markers[marker_list]
     return ""
 
-def discourse_relation_explicit_corrected(item):
+def discourse_relation_explicit_corrected(item, result):
     if len(item["cont"]) == 0:
         return ""
     marker = item["cont"][0].text.lower()
@@ -166,7 +166,7 @@ def discourse_relation_explicit_corrected(item):
         # Keine "als"-Korrektur
         # if (marker == "als") and (cat in ["se", "stim-exp"]):
         #     return "Contingency.Cause.Reason"
-        elif (cat in ["es", "exp-stim"]) and (marker in ["der", "welcher", "die", "welche"]) and (item["Koreferenz"] == "NP2"):
+        elif (cat in ["es", "exp-stim"]) and (marker in ["der", "welcher", "die", "welche"]) and (result["Koreferenz"] == "NP2"):
             return "Contingency.Cause.Reason"
     return discourse_relation_explicit(item)
 
@@ -204,11 +204,11 @@ def annotate(row, has_connector = False):
     result = dict()
     result["Koreferenz"], result["Anaphorische Form"] = coreference(item)
     if not has_connector:
-        results["Diskursmarker"] = discourse_marker(item)
+        result["Diskursmarker"] = discourse_marker(item)
         result["Diskursrelation Explizit"] = discourse_relation_explicit(item)
         if "verbclass" in row.keys():
             item["verbclass"] = row["verbclass"]
-            result["Diskursrelation Explizit SE/ES-Korrektur"] = discourse_relation_explicit_corrected(item)
+            result["Diskursrelation Explizit SE/ES-Korrektur"] = discourse_relation_explicit_corrected(item, result)
         result["Diskursrelation Implizit"] = discourse_relation_implicit(item)
         result["Fortsetzungstyp"] = cont_type(item)
         result["Relativkoreferenz"] = relative_coreference(item)
