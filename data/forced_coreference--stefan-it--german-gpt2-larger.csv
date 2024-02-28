@@ -1,0 +1,5 @@
+condition;type;prompt;NP1;NP2;NP1gender;verb;verbclass;forced;cont;Koreferenz;Anaphorische Form
+2;Experiment;Lara beneidete Sven, ohne es offen zu zeigen, weil;Lara;Sven;f;beneidete;es;NP1;sie sich nicht;NP1;personal
+3;Experiment;Simon beneidete Lea, ohne es offen zu zeigen, weil;Simon;Lea;m;beneidete;es;NP1;er sie nicht;NP1;personal
+14;Experiment;Lara begeisterte Sven auf vielfältige Art und Weise, weil;Lara;Sven;f;begeisterte;se;NP2;er sich immer;NP2;personal
+15;Experiment;Simon begeisterte Lea auf vielfältige Art und Weise, weil;Simon;Lea;m;begeisterte;se;NP2;sie sich immer;NP2;personal
