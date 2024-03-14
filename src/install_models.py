@@ -35,8 +35,8 @@ for model, _, _, _ in models:
 
 for model, _, _, _ in models:
     pipe = pipeline("text-generation", model = model, device = 0)
-    model.tokenizer.pad_token_id = model.model.config.eos_token_id
-    model.tokenizer.padding_side = "left"
+    pipe.tokenizer.pad_token_id = pipe.model.config.eos_token_id
+    pipe.tokenizer.padding_side = "left"
     for batch_size in [16, 32, 64, 128, 256, 512]:
         print(f"model {model} with batch size {batch_size}")
         dataset = MyDataset(batch_size)
