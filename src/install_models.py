@@ -23,30 +23,16 @@ class MyDataset(Dataset):
     def __getitem__(self, i):
         return "Peter hasste Maria ganz ohne Absicht, weil"
 
+"""
+# just load all the models once 
 for model, _, _, _ in models:
     pipe = pipeline("text-generation", model = model, device = 0)
+""" 
+
+for model, _, _, _ in models:
+    for batch_size in [16, 32, 64, 128]:
+        print(f"model {model} with batch size {batch_size}")
+        pipe = pipeline("text-generation", model = model, device = 0)
+        dataset = MyDataset()
+        tqdm(pipe(dataset, batch_size=batch_size, remove_invalid_values=True, early_stopping = True, do_sample = False, diversity_penalty = .6, num_beam_groups = 10, num_beams = 10, max_new_tokens = 25), total=len(dataset))
     
-for model, _, _, _ in models:
-    print(f"model {model} with batch size 16")
-    pipe = pipeline("text-generation", model = model, device = 0)
-    dataset = MyDataset()
-    tqdm(pipe(dataset, batch_size=16, remove_invalid_values=True, early_stopping = True, do_sample = False, diversity_penalty = .6, num_beam_groups = 10, num_beams = 10, max_new_tokens = 25), total=len(dataset))
-    
-for model, _, _, _ in models:
-    print(f"model {model} with batch size 32")
-    pipe = pipeline("text-generation", model = model, device = 0)
-    dataset = MyDataset()
-    tqdm(pipe(dataset, batch_size=32, remove_invalid_values=True, early_stopping = True, do_sample = False, diversity_penalty = .6, num_beam_groups = 10, num_beams = 10, max_new_tokens = 25), total=len(dataset))
-
-for model, _, _, _ in models:
-    print(f"model {model} with batch size 64")
-    pipe = pipeline("text-generation", model = model, device = 0)
-    dataset = MyDataset()
-    tqdm(pipe(dataset, batch_size=64, remove_invalid_values=True, early_stopping = True, do_sample = False, diversity_penalty = .6, num_beam_groups = 10, num_beams = 10, max_new_tokens = 25), total=len(dataset))
-
-for model, _, _, _ in models:
-    print(f"model {model} with batch size 128")
-    pipe = pipeline("text-generation", model = model, device = 0)
-    dataset = MyDataset()
-    tqdm(pipe(dataset, batch_size=128, remove_invalid_values=True, early_stopping = True, do_sample = False, diversity_penalty = .6, num_beam_groups = 10, num_beams = 10, max_new_tokens = 25), total=len(dataset))
-
