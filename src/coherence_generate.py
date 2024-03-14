@@ -24,12 +24,12 @@ models = [
     # ("ai-forever/mGPT", 4, 0, None),
     # ("facebook/xglm-564M", 16, 0, None),
     # ("facebook/xglm-1.7B", 4, 0, None),
-    ("facebook/xglm-2.9B", 16, 0, None), # The larger models should be ran on a bigger GPU 
-    ("facebook/xglm-4.5B", 1, 0, None), # The larger models should be ran on a bigger GPU
-    ("facebook/xglm-7.5B", 1, 0, None), # The larger models should be ran on a bigger GPU
+    ("facebook/xglm-2.9B", 64, 0, None), # The larger models should be ran on a bigger GPU 
+    ("facebook/xglm-4.5B", 32, 0, None), # The larger models should be ran on a bigger GPU
+    ("facebook/xglm-7.5B", 16, 0, None), # The larger models should be ran on a bigger GPU
     # ("malteos/bloom-350m-german", 32, 0, None),
-    # ("malteos/bloom-1b5-clp-german", 4, 0, None)
-    ("malteos/bloom-6b4-clp-german", 0, 0, None) # The larger models should be ran on a bigger GPU
+    # ("malteos/bloom-1b5-clp-german", 4, 0, None),
+    ("malteos/bloom-6b4-clp-german", 16, 0, None) # The larger models should be ran on a bigger GPU
 ]
 
 with open("../items/names.json", encoding="utf-8") as nfile:
