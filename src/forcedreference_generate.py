@@ -25,16 +25,16 @@ class PromptDataset(Dataset):
         
 models = [
     # model name, batch_size, device, device Mapping
-    # ("stefan-it/german-gpt2-larger", 64, 0, None),
-    # ("ai-forever/mGPT", 4, 0, None),
-    # ("facebook/xglm-564M", 16, 0, None),
-    # ("facebook/xglm-1.7B", 4, 0, None),
-    ("facebook/xglm-2.9B", 32, 0, None), # The larger models should be ran on a bigger GPU 
-    ("facebook/xglm-4.5B", 16, 0, None), # The larger models should be ran on a bigger GPU
-    ("facebook/xglm-7.5B", 8, 0, None), # The larger models should be ran on a bigger GPU
-    # ("malteos/bloom-350m-german", 32, 0, None),
-    # ("malteos/bloom-1b5-clp-german", 4, 0, None),
-    ("malteos/bloom-6b4-clp-german", 8, 0, None) # The larger models should be ran on a bigger GPU
+    # ("stefan-it/german-gpt2-larger", 64, 0, None, False),
+    # ("ai-forever/mGPT", 4, 0, None, False),
+    # ("facebook/xglm-564M", 16, 0, None, True),
+    # ("facebook/xglm-1.7B", 4, 0, None, True),
+    ("facebook/xglm-2.9B", 32, 0, None, True), # The larger models should be ran on a bigger GPU 
+    ("facebook/xglm-4.5B", 16, 0, None, True), # The larger models should be ran on a bigger GPU
+    ("facebook/xglm-7.5B", 8, 0, None, True), # The larger models should be ran on a bigger GPU
+    # ("malteos/bloom-350m-german", 32, 0, None, False),
+    # ("malteos/bloom-1b5-clp-german", 4, 0, None, False),
+    ("malteos/bloom-6b4-clp-german", 8, 0, None, False) # The larger models should be ran on a bigger GPU
 ]
 
 with open("../items/names.json", encoding="utf-8") as nfile:
