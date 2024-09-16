@@ -19,7 +19,7 @@ class PromptDataset(Dataset):
 
 
 models = [
-    ("malteos/bloom-6b4-clp-german", 8, 0, None)
+    ("malteos/bloom-6b4-clp-german", 1, "cpu", None)
 ]
 
 
@@ -41,7 +41,7 @@ for model_name, batch_size, device, device_map in models:
     prompts_regular = PromptDataset([prompt[:-4] for prompt in df_regular["Prompt"].tolist()])
     conts_regular = []
     
-    for out in tqdm(model(prompts_regular, batch_size = batch_size, remove_invalid_values=True, early_stopping = True, do_sample = False, diversity_penalty = .6, num_beam_groups = 10, num_beams = 10, max_new_tokens = 25), total = len(prompts)):
+    for out in tqdm(model(prompts_regular, batch_size = batch_size, remove_invalid_values=True, early_stopping = True, do_sample = False, diversity_penalty = .6, num_beam_groups = 10, num_beams = 10, max_new_tokens = 25), total = len(prompts_regular)):
         conts_regular += [model_out["generated_text"] for model_out in out]
     df_regular["Bloom"] = conts_regular
     df_regular.to_csv("../data/bloom-regular.csv", index=None, sep=";")
@@ -49,7 +49,7 @@ for model_name, batch_size, device, device_map in models:
     prompts_durch = PromptDataset([prompt[:-1] for prompt in df_durch["Prompt"].tolist()])
     conts_durch = []
     
-    for out in tqdm(model(prompts_durch, batch_size = batch_size, remove_invalid_values=True, early_stopping = True, do_sample = False, diversity_penalty = .6, num_beam_groups = 10, num_beams = 10, max_new_tokens = 25), total = len(prompts)):
+    for out in tqdm(model(prompts_durch, batch_size = batch_size, remove_invalid_values=True, early_stopping = True, do_sample = False, diversity_penalty = .6, num_beam_groups = 10, num_beams = 10, max_new_tokens = 25), total = len(prompts_durch)):
         conts_durch += [model_out["generated_text"] for model_out in out]
     df_durch["Bloom"] = conts_durch    
     df_durch.to_csv("../data/bloom-durch.csv", index=None, sep=";")
