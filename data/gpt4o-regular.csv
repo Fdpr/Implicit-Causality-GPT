@@ -1,0 +1,161 @@
+Condition_Code;Connective;Experiment;Gender_NP1;Gender_NP2;Human;Item;List;Prompt;Verbtype;list;ChatGPT
+2;weil;1;m;f;Klaus erstaunte Marie, weil er ihr Blumen mitbrachte;18;3;Klaus erstaunte Marie, weil ...;SE;0;Klaus erstaunte Marie, weil er plötzlich fließend Französisch sprach.
+3;weil;1;f;m;Stefanie vertraute Dennis, weil er immer zuverlässig ist.;16;2;Stefanie vertraute Dennis, weil ...;ES;0;Stefanie vertraute Dennis, weil er stets ehrlich und zuverlässig war.
+4;weil;1;m;f;Alexander sorgte sich um Alisa, weil sie ihre Eltern verloren hatte.;19;2;Alexander sorgte sich um Alisa, weil ...;ES;0;Alexander sorgte sich um Alisa, weil sie seit Tagen nicht erreichbar war.
+5;sodass;1;f;m;Emma amüsierte Fritz, sodass dieser sich noch etwas Gin einschenkte.;12;3;Emma amüsierte Fritz, sodass ...;SE;0;Emma amüsierte Fritz, sodass er laut zu lachen begann.
+2;weil;1;m;f;Alexander erschütterte Alisa, weil sein Gewicht den Boden zum Beben brachte.;19;4;Alexander erschütterte Alisa, weil ...;SE;0;Alexander erschütterte Alisa, weil er ihr ein lange gehütetes Geheimnis offenbarte.
+3;weil;1;f;m;Adele achtete Robin, weil er stets freundlich zu ihr war.;10;4;Adele achtete Robin, weil ...;ES;0;Adele achtete Robin, weil er immer ehrlich und hilfsbereit war.
+4;weil;1;m;f;Tim vergötterte Martha, weil sie die schönste im ganzen Land war.;5;4;Tim vergötterte Martha, weil ...;ES;0;Tim vergötterte Martha, weil sie immer für ihn da war.
+7;sodass;1;f;m;Martha vergötterte Tim, sodass sie ihm jeden Wunsch von den Augen abliest.;5;2;Martha vergötterte Tim, sodass ...;ES;0;Martha vergötterte Tim, sodass sie immer seine Nähe suchte und alles tat, um ihn zu beeindrucken.
+5;sodass;1;f;m;Johanna schockierte Lars, sodass er rücjwärts vom stuhl fiel;1;4;Johanna schockierte Lars, sodass ...;SE;0;Johanna schockierte Lars, sodass er völlig sprachlos dastand.
+6;sodass;1;m;f;Patrick faszinierte Anastasia, sodass sie kaum die Augen von ihm lassen konnte.;2;4;Patrick faszinierte Anastasia, sodass ...;SE;0;Patrick faszinierte Anastasia, sodass sie viel Zeit miteinander verbrachten.
+7;sodass;1;f;m;Simone verabscheute Michael, sodass er sich genötigt sah, ihre Anwesenheit zu meiden.;3;4;Simone verabscheute Michael, sodass ...;ES;0;Simone verabscheute Michael, sodass sie jedes Mal den Raum verließ, wenn er ihn betrat.
+8;sodass;1;m;f;Daniel misstraute Jana, sodass er die nicht aus den Augen lies;6;2;Daniel misstraute Jana, sodass ...;ES;0;Daniel misstraute Jana, sodass er ihr Geheimnisse vorenthielt.
+2;weil;1;m;f;Armin begeisterte Anna, weil er sportlich war.;11;4;Armin begeisterte Anna, weil ...;SE;0;Armin begeisterte Anna, weil er ihr eine wunderbare Überraschung vorbereitet hatte.
+3;weil;1;f;m;Jana misstraute Daniel, weil er sie schon einmal verraten hatte.;6;4;Jana misstraute Daniel, weil ...;ES;0;Jana misstraute Daniel, weil er ihr bereits mehrere Male widersprüchliche Geschichten erzählt hatte.
+4;weil;1;m;f;Albert bedauerte Aisha, weil sie viel Pech im Leben hatte.;20;3;Albert bedauerte Aisha, weil ...;ES;0;Albert bedauerte Aisha, weil sie ihre Träume aufgeben musste.
+8;sodass;1;m;f;Klaus ekelte sich vor Marie, sodass er ihr sagte, was mit ihr nicht stummt.;18;2;Klaus ekelte sich vor Marie, sodass ...;ES;0;Klaus ekelte sich vor Marie, sodass er ihren Kuss ablehnte.
+1;weil;1;f;m;Jennifer gefiel Tobias, weil Tobias so gut rechnete.;8;4;Jennifer gefiel Tobias, weil ...;SE;0;Jennifer gefiel Tobias, weil er ihre positive Ausstrahlung und ihren Humor schätzte.
+2;weil;1;m;f;Rüdiger ängstigte Katharina, weil er sie oft anbellte und auf sie zu sprang.;15;4;Rüdiger ängstigte Katharina, weil ...;SE;0;Rüdiger ängstigte Katharina, weil er plötzlich laut schrie.
+3;weil;1;f;m;Annemarie hasste Malte, weil er sie immer aergerte;9;3;Annemarie hasste Malte, weil ...;ES;0;Annemarie hasste Malte, weil er sie ständig belog.
+5;sodass;1;f;m;Marie erstaunte Klaus, sodass Er umfiel.;18;1;Marie erstaunte Klaus, sodass ...;SE;0;Marie erstaunte Klaus, sodass er sprachlos blieb.
+1;weil;1;f;m;Melanie langweilte Jacob, weil sie gelangweilt von ihm war;13;1;Melanie langweilte Jacob, weil ...;SE;0;Melanie langweilte Jacob, weil sie ständig über dasselbe Thema sprach.
+2;weil;1;m;f;Albert erschreckte Aisha, weil er ihr eine Spinne auf das Kopfkissen legte;20;1;Albert erschreckte Aisha, weil ...;SE;0;Albert erschreckte Aisha, weil er plötzlich hinter ihr auftauchte.
+3;weil;1;f;m;Anna bewunderte Armin, weil er so ein großes Herz hatte.;11;1;Anna bewunderte Armin, weil ...;ES;0;Anna bewunderte Armin, weil er immer hilfsbereit und freundlich war.
+4;weil;1;m;f;Dennis vertraute Stefanie, weil sie nett war;16;3;Dennis vertraute Stefanie, weil ...;ES;0;Dennis vertraute Stefanie, weil sie immer ehrlich zu ihm war.
+1;weil;1;f;m;Marike irritierte Felix, weil sie ständig an den Fingernägeln nagte.;17;1;Marike irritierte Felix, weil ...;SE;0;Marike irritierte Felix, weil sie plötzlich aufhörte, mit ihm zu sprechen.
+2;weil;1;m;f;Oliver überraschte Lena, weil sie geburtstag hatte;7;4;Oliver überraschte Lena, weil ...;SE;0;Oliver überraschte Lena, weil er ihr Lieblingsessen gekocht hatte.
+4;weil;1;m;f;Fritz liebte Emma, weil sie so rücksichtsvoll ist.;12;3;Fritz liebte Emma, weil ...;ES;0;Fritz liebte Emma, weil sie immer einen Weg fand, ihn zum Lachen zu bringen.
+6;sodass;1;m;f;Michael enttäuschte Simone, sodass sie die Beziehung beendete.;3;1;Michael enttäuschte Simone, sodass ...;SE;0;Michael enttäuschte Simone, sodass sie ihm nicht mehr vertraute.
+2;weil;1;m;f;Yannick verblüffte Janina, weil Er ihr einen Song geschrieben hatte.;14;3;Yannick verblüffte Janina, weil ...;SE;0;Yannick verblüffte Janina, weil er plötzlich fließend Mandarin sprach.
+3;weil;1;f;m;Marike vermisste Felix, weil er sich lang nicht mehr gemeldet hatte.;17;3;Marike vermisste Felix, weil ...;ES;0;Marike vermisste Felix, weil er ihr bester Freund war.
+6;sodass;1;m;f;Oliver überraschte Lena, sodass sie erschrak;7;1;Oliver überraschte Lena, sodass ...;SE;0;Oliver überraschte Lena, sodass sie vor Freude in Tränen ausbrach.
+8;sodass;1;m;f;Patrick verehrte Anastasia, sodass er die Augen vor der Realität verschloss.;2;2;Patrick verehrte Anastasia, sodass ...;ES;0;Patrick verehrte Anastasia, sodass er alles tat, um ihr zu gefallen.
+1;weil;1;f;m;Alisa erschütterte Alexander, weil er ein trauriges Lied für sie geschrieben und vorgesungen hat.;19;3;Alisa erschütterte Alexander, weil ...;SE;0;Alisa erschütterte Alexander, weil sie seine tiefsten Geheimnisse enthüllte.
+2;weil;1;m;f;Tobias gefiel Jennifer, weil sie intelligent und hübsch war.;8;1;Tobias gefiel Jennifer, weil ...;SE;0;Tobias gefiel Jennifer, weil er humorvoll und einfühlsam war.
+4;weil;1;m;f;Malte hasste Annemarie, weil er sie nicht verstand.;9;4;Malte hasste Annemarie, weil ...;ES;0;Malte hasste Annemarie, weil sie ihn ständig kritisierte.
+8;sodass;1;m;f;Malte hasste Annemarie, sodass er sie mobbte;9;1;Malte hasste Annemarie, sodass ...;ES;0;Malte hasste Annemarie, sodass er jedem von ihren Fehlern erzählte.
+2;weil;1;m;f;Lars schockierte Johanna, weil er einen Unfall hatte.;1;2;Lars schockierte Johanna, weil ...;SE;0;Lars schockierte Johanna, weil er ihr ein altes Familiengeheimnis enthüllte.
+3;weil;1;f;m;Martha vergötterte Tim, weil er sehr liebenswert war.;5;3;Martha vergötterte Tim, weil ...;ES;0;Martha vergötterte Tim, weil ... er immer für sie da war und ihr seine Liebe auf viele kleine Arten zeigte.
+5;sodass;1;f;m;Adele beeindruckte Robin, sodass er seine Vorurteile über sie korrigieren musste.;10;1;Adele beeindruckte Robin, sodass ...;SE;0;Adele beeindruckte Robin, sodass er sprachlos war.
+6;sodass;1;m;f;Felix irritierte Marike, sodass sie nochmal nachfragen musste.;17;3;Felix irritierte Marike, sodass ...;SE;0;Felix irritierte Marike, sodass sie nicht wusste, was sie als nächstes sagen sollte.
+3;weil;1;f;m;Janina himmelte Yannick an, weil er trotz schwieriger Familienverhälntisse nie die Hoffnung verloren hatte;14;4;Janina himmelte Yannick an, weil ...;ES;0;Janina himmelte Yannick an, weil er ihr bei einem schwierigen Projekt geholfen hatte und sie seine Intelligenz bewunderte.
+5;sodass;1;f;m;Jana verwirrte Daniel, sodass er sein Referat verdarb.;6;1;Jana verwirrte Daniel, sodass ...;SE;0;Jana verwirrte Daniel, sodass er nicht wusste, wie er reagieren sollte.
+6;sodass;1;m;f;Kevin inspirierte Saskia, sodass sie auch anfing zu malen;4;2;Kevin inspirierte Saskia, sodass ...;SE;0;Kevin inspirierte Saskia, sodass sie ihre Träume verfolgte und schließlich ihre Ziele erreichte.
+8;sodass;1;m;f;Kevin respektierte Saskia, sodass er mit ihr auch gut probleme besprechen konnte;4;4;Kevin respektierte Saskia, sodass ...;ES;0;Kevin respektierte Saskia, sodass er immer ihre Meinung berücksichtigte.
+1;weil;1;f;m;Anastasia faszinierte Patrick, weil er so viel wusste.;2;2;Anastasia faszinierte Patrick, weil ...;SE;0;Anastasia faszinierte Patrick, weil sie eine geheimnisvolle Aura umgab und ihre Augen eine unbeschreibliche Tiefe hatten.
+3;weil;1;f;m;Simone verabscheute Michael, weil er sie stets beleidigte;3;1;Simone verabscheute Michael, weil ...;ES;0;Simone verabscheute Michael, weil er sie immer wieder belog und ihr Vertrauen missbrauchte.
+4;weil;1;m;f;Oliver schätzte Lena, weil sie so gut zuhörte;7;2;Oliver schätzte Lena, weil ...;ES;0;Oliver schätzte Lena, weil sie immer ehrlich und unterstützend war.
+5;sodass;1;f;m;Annemarie störte Malte, sodass dieser auf Dauer entnervt den Raum verließ.;9;4;Annemarie störte Malte, sodass ...;SE;0;Annemarie störte Malte, sodass er sein Buch nicht weiterlesen konnte.
+2;weil;1;m;f;Malte störte Annemarie, weil er laut redete, während sie sm Lernen war;9;2;Malte störte Annemarie, weil ...;SE;0;Malte störte Annemarie, weil er laut Musik hörte.
+5;sodass;1;f;m;Simone enttäuschte Michael, sodass Er nicht mehr mit ihr sprechen wollte.;3;2;Simone enttäuschte Michael, sodass ...;SE;0;Simone enttäuschte Michael, sodass er ihr nicht mehr vertraute.
+6;sodass;1;m;f;Tim bezauberte Martha, sodass Sie immer verträumt in seine Richtung schaute;5;3;Tim bezauberte Martha, sodass ...;SE;0;Tim bezauberte Martha, sodass sie ihm nicht widerstehen konnte.
+7;sodass;1;f;m;Adele achtete Robin, sodass sie ihm mehr vertraute.;10;3;Adele achtete Robin, sodass ...;ES;0;Adele achtete Robin, sodass er keinen Fehler machte.
+1;weil;1;f;m;Marie erstaunte Klaus, weil sie so anders war als die anderen Mädchen.;18;2;Marie erstaunte Klaus, weil ...;SE;0;Marie erstaunte Klaus, weil sie plötzlich fließend Japanisch sprach.
+2;weil;1;m;f;Jacob langweilte Melanie, weil er nur über sich sprach;13;2;Jacob langweilte Melanie, weil ...;SE;0;Jacob langweilte Melanie, weil er ständig über dasselbe Thema sprach.
+3;weil;1;f;m;Alisa sorgte sich um Alexander, weil er eine starke Erkältung bekam.;19;1;Alisa sorgte sich um Alexander, weil ...;ES;0;Alisa sorgte sich um Alexander, weil er in letzter Zeit häufig krank war.
+7;sodass;1;f;m;Alisa sorgte sich um Alexander, sodass sie ihm Hilfe anbot;19;4;Alisa sorgte sich um Alexander, sodass ...;ES;0;Alisa sorgte sich um Alexander, sodass sie ihm jeden Tag eine Nachricht schrieb, um sicherzugehen, dass es ihm gut ging.
+1;weil;1;f;m;Adele beeindruckte Robin, weil sie gute Musik machte;10;2;Adele beeindruckte Robin, weil ...;SE;0;Adele beeindruckte Robin, weil sie eine wunderschöne Stimme hatte.
+3;weil;1;f;m;Jennifer mochte Tobias, weil Er gerne Handball spielte.;8;2;Jennifer mochte Tobias, weil ...;ES;0;Jennifer mochte Tobias, weil er immer aufmerksam und freundlich zu ihr war.
+6;sodass;1;m;f;Albert erschreckte Aisha, sodass Sie einen Unfall baute.;20;2;Albert erschreckte Aisha, sodass ...;SE;0;Albert erschreckte Aisha, sodass sie laut aufschrie.
+7;sodass;1;f;m;Jennifer mochte Tobias, sodass sie sich auf ein Kaffee trafen.;8;1;Jennifer mochte Tobias, sodass ...;ES;0;Jennifer mochte Tobias, sodass sie oft Zeit mit ihm verbrachte.
+3;weil;1;f;m;Lena schätzte Oliver, weil er sehr ehrlich war.;7;1;Lena schätzte Oliver, weil ...;ES;0;Lena schätzte Oliver, weil er immer freundlich und hilfsbereit war.
+4;weil;1;m;f;Tobias mochte Jennifer, weil sie schön war;8;3;Tobias mochte Jennifer, weil ...;ES;0;Tobias mochte Jennifer, weil sie ihn immer zum Lachen brachte.
+5;sodass;1;f;m;Lena überraschte Oliver, sodass es ihm unwohl war;7;2;Lena überraschte Oliver, sodass ...;SE;0;Lena überraschte Oliver, sodass er sprachlos war und sie lange umarmte.
+6;sodass;1;m;f;Rüdiger ängstigte Katharina, sodass sie nie von der Seite ihres Freundes wich, wenn sie ihm auf einer Feier begegneten;15;1;Rüdiger ängstigte Katharina, sodass ...;SE;0;Rüdiger ängstigte Katharina, sodass sie die Tür hinter sich zuschlug.
+1;weil;1;f;m;Emma amüsierte Fritz, weil sie dauernd Witze erzählte.;12;4;Emma amüsierte Fritz, weil ...;SE;0;Emma amüsierte Fritz, weil sie ihm einen lustigen Witz erzählte.
+2;weil;1;m;f;Kevin inspirierte Saskia, weil er gut zeichnen kann.;4;1;Kevin inspirierte Saskia, weil ...;SE;0;Kevin inspirierte Saskia, weil er mit seiner positiven Einstellung und Durchhaltevermögen zeigte, was möglich ist.
+3;weil;1;f;m;Melanie bemitleidete Jacob, weil er so einsam war.;13;3;Melanie bemitleidete Jacob, weil ...;ES;0;Melanie bemitleidete Jacob, weil er seinen Job verloren hatte.
+5;sodass;1;f;m;Jennifer gefiel Tobias, sodass sie ihm offen und ehrlich ihre Gefühle mitteilte.;8;3;Jennifer gefiel Tobias, sodass ...;SE;0;Jennifer gefiel Tobias, sodass sie oft gemeinsam Zeit verbrachten und er sich bemühte, sie immer wieder zum Lachen zu bringen.
+3;weil;1;f;m;Katharina fürchtete Rüdiger, weil er so unberechenbar war.;15;1;Katharina fürchtete Rüdiger, weil ...;ES;0;Katharina fürchtete Rüdiger, weil er oft wütend und unberechenbar war.
+6;sodass;1;m;f;Armin begeisterte Anna, sodass sie sich in ihn verliebte.;11;1;Armin begeisterte Anna, sodass ...;SE;0;Armin begeisterte Anna, sodass sie anfing, regelmäßig mit ihm zu joggen.
+7;sodass;1;f;m;Stefanie vertraute Dennis, sodass sie ihren Zweitschlüssel bei ihm lies, sollte sie sich irgendwann aussperren.;16;1;Stefanie vertraute Dennis, sodass ...;ES;0;Stefanie vertraute Dennis, sodass er ihr das Geheimnis anvertraute.
+8;sodass;1;m;f;Albert bedauerte Aisha, sodass die beiden über alles reden mussten;20;4;Albert bedauerte Aisha, sodass ...;ES;0;Albert bedauerte Aisha, sodass er beschloss, ihr in dieser schwierigen Situation zu helfen.
+1;weil;1;f;m;Aisha erschreckte Albert, weil sie plötzlich aus dem Schatten sprang.;20;4;Aisha erschreckte Albert, weil ...;SE;0;Aisha erschreckte Albert, weil er hinter der Tür plötzlich hervorsprang.
+2;weil;1;m;f;Michael enttäuschte Simone, weil er sie betrogen hatte;3;4;Michael enttäuschte Simone, weil ...;SE;0;Michael enttäuschte Simone, weil er ihr Versprechen nicht hielt.
+6;sodass;1;m;f;Malte störte Annemarie, sodass sie nun den Satz von vorne schreiben musste.;9;3;Malte störte Annemarie, sodass ...;SE;0;Malte störte Annemarie, sodass sie ihr Buch nicht weiterlesen konnte.
+8;sodass;1;m;f;Oliver schätzte Lena, sodass er ihr alles hinterhertrug;7;3;Oliver schätzte Lena, sodass ...;ES;0;Oliver schätzte Lena, sodass er immer ihre Meinungen und Ratschläge suchte.
+1;weil;1;f;m;Stefanie entzückte Dennis, weil sie so schöne augen hatte.;16;4;Stefanie entzückte Dennis, weil ...;SE;0;Stefanie entzückte Dennis, weil sie so herzlich und humorvoll war.
+4;weil;1;m;f;Rüdiger fürchtete Katharina, weil sie sich als skrupellose Gangsterin erwiesen hatte.;15;2;Rüdiger fürchtete Katharina, weil ...;ES;0;Rüdiger fürchtete Katharina, weil sie immer die Wahrheit herausfand.
+5;sodass;1;f;m;Katharina ängstigte Rüdiger, sodass er es für besser hielt Abstand zu halten;15;2;Katharina ängstigte Rüdiger, sodass ...;SE;0;Katharina ängstigte Rüdiger, sodass er sich in sein Zimmer zurückzog.
+6;sodass;1;m;f;Robin beeindruckte Adele, sodass sie sich nochmals mit ihm treffen wollte;10;4;Robin beeindruckte Adele, sodass ...;SE;0;Robin beeindruckte Adele, sodass sie ihn bei der nächsten Gelegenheit um ein Date bat.
+1;weil;1;f;m;Johanna schockierte Lars, weil sie plötzlich anfing zu erzählen;1;1;Johanna schockierte Lars, weil ...;SE;1;Johanna schockierte Lars, weil sie ihm überraschend ihre Kündigung überreichte.
+6;sodass;1;m;f;Alexander erschütterte Alisa, sodass sie Angst vor ihm bekam;19;1;Alexander erschütterte Alisa, sodass ...;SE;1;Alexander erschütterte Alisa, sodass sie keinen klaren Gedanken fassen konnte.
+7;sodass;1;f;m;Emma liebte Fritz, sodass sie ihn auf der Stelle heiraten würde.;12;1;Emma liebte Fritz, sodass ...;ES;1;Emma liebte Fritz, sodass sie beschloss, ihm ihre Gefühle zu gestehen.
+8;sodass;1;m;f;Fritz liebte Emma, sodass die beiden nach kurzer Zeit heirateten.;12;4;Fritz liebte Emma, sodass ...;ES;1;Fritz liebte Emma, sodass er ihr jeden Tag frische Blumen brachte.
+1;weil;1;f;m;Lena überraschte Oliver, weil Sie spontan nach Karlsruhe gekommen war;7;3;Lena überraschte Oliver, weil ...;SE;1;Lena überraschte Oliver, weil sie ihm ein unerwartetes Geschenk machte.
+5;sodass;1;f;m;Saskia inspirierte Kevin, sodass er endlich tanzen lernte;4;3;Saskia inspirierte Kevin, sodass ...;SE;1;Saskia inspirierte Kevin, sodass er seinen Traum, Musiker zu werden, verwirklichte.
+6;sodass;1;m;f;Tobias gefiel Jennifer, sodass sie immer in seiner Nähe schüchtern wurde.;8;2;Tobias gefiel Jennifer, sodass ...;SE;1;Tobias gefiel Jennifer, sodass er sich entschloss, sie zu einem Date einzuladen.
+8;sodass;1;m;f;Yannick himmelte Janina an, sodass sie immer Blumen vo n ihm bekam;14;2;Yannick himmelte Janina an, sodass ...;ES;1;Yannick himmelte Janina an, sodass sie verlegen ihrem Blick auswich.
+1;weil;1;f;m;Janina verblüffte Yannick, weil sie gut singen konnte;14;2;Janina verblüffte Yannick, weil ...;SE;1;Janina verblüffte Yannick, weil sie plötzlich fließend Japanisch sprach.
+2;weil;1;m;f;Fritz amüsierte Emma, weil er so tollpatschig war.;12;1;Fritz amüsierte Emma, weil ...;SE;1;Fritz amüsierte Emma, weil er ihr lustige Geschichten erzählte.
+3;weil;1;f;m;Emma liebte Fritz, weil er ein liebenswerter Mensch ist.;12;2;Emma liebte Fritz, weil ...;ES;1;Emma liebte Fritz, weil er immer für sie da war und ihr das Gefühl von Geborgenheit gab.
+4;weil;1;m;f;Daniel misstraute Jana, weil sie ständig log.;6;1;Daniel misstraute Jana, weil ...;ES;1;Daniel misstraute Jana, weil sie ihm einmal gelogen hatte.
+1;weil;1;f;m;Martha bezauberte Tim, weil sie so natürlich war.;5;1;Martha bezauberte Tim, weil ...;SE;1;Martha bezauberte Tim, weil sie ein herzliches Lächeln und eine warmherzige Ausstrahlung hatte.
+5;sodass;1;f;m;Aisha erschreckte Albert, sodass er das Wasser verschüttete;20;3;Aisha erschreckte Albert, sodass ...;SE;1;Aisha erschreckte Albert, sodass er laut aufschrie und den Stift fallen ließ.
+6;sodass;1;m;f;Lars schockierte Johanna, sodass sie nun immer noch Lars meidet.;1;3;Lars schockierte Johanna, sodass ...;SE;1;Lars schockierte Johanna, sodass sie sprachlos dastand.
+7;sodass;1;f;m;Marike vermisste Felix, sodass sie ihm viele Nachrichten schrieb;17;2;Marike vermisste Felix, sodass ...;ES;1;Marike vermisste Felix, sodass sie ihm jeden Tag schrieb.
+4;weil;1;m;f;Lars verachtete Johanna, weil sie keine Tiere achtet;1;4;Lars verachtete Johanna, weil ...;ES;1;Lars verachtete Johanna, weil sie ihn betrogen hatte.
+6;sodass;1;m;f;Fritz amüsierte Emma, sodass sie sich ein Lächeln verkneifen musste.;12;2;Fritz amüsierte Emma, sodass ...;SE;1;Fritz amüsierte Emma, sodass sie laut zu lachen begann.
+7;sodass;1;f;m;Lena schätzte Oliver, sodass Sie ihm das mitteilte;7;4;Lena schätzte Oliver, sodass ...;ES;1;Lena schätzte Oliver, sodass sie ihm immer vertraute.
+8;sodass;1;m;f;Dennis vertraute Stefanie, sodass er ihr erzählte, dass er heimlich in Steffen verliebt war;16;4;Dennis vertraute Stefanie, sodass ...;ES;1;Dennis vertraute Stefanie, sodass sie ihm das Geheimnis anvertraute.
+5;sodass;1;f;m;Marike irritierte Felix, sodass es einer Klärung bedarf;17;4;Marike irritierte Felix, sodass ...;SE;1;Marike irritierte Felix, sodass er das Gespräch abrupt beendete.
+6;sodass;1;m;f;Jacob langweilte Melanie, sodass sie gähnte;13;3;Jacob langweilte Melanie, sodass ...;SE;1;Jacob langweilte Melanie, sodass sie anfing, auf ihr Handy zu schauen.
+7;sodass;1;f;m;Marie ekelte sich vor Klaus, sodass Sie versuchte, ihm nicht zu nahe zu kommen!;18;3;Marie ekelte sich vor Klaus, sodass ...;ES;1;Marie ekelte sich vor Klaus, sodass sie ihn fortan mied.
+8;sodass;1;m;f;Michael verabscheute Simone, sodass er sie hasste;3;3;Michael verabscheute Simone, sodass ...;ES;1;Michael verabscheute Simone, sodass er jede Gelegenheit mied, mit ihr Zeit zu verbringen.
+3;weil;1;f;m;Aisha bedauerte Albert, weil er arm war.;20;2;Aisha bedauerte Albert, weil ...;ES;1;Aisha bedauerte Albert, weil er seine Harmonikasaite gerissen hatte.
+5;sodass;1;f;m;Melanie langweilte Jacob, sodass er ihrer zusehends überdrüssig wurde.;13;4;Melanie langweilte Jacob, sodass ...;SE;1;Melanie langweilte Jacob, sodass er ständig auf sein Telefon schaute.
+7;sodass;1;f;m;Johanna verachtete Lars, sodass die beiden nicht gut miteinander klar kamen;1;2;Johanna verachtete Lars, sodass ...;ES;1;Johanna verachtete Lars, sodass sie ihn nicht zu ihrer Feier einlud.
+8;sodass;1;m;f;Alexander sorgte sich um Alisa, sodass sie versuchte lockerer zu werden.;19;3;Alexander sorgte sich um Alisa, sodass ...;ES;1;Alexander sorgte sich um Alisa, sodass er ständig nach ihr schaute und versuchte, ihr zu helfen, wo immer er konnte.
+1;weil;1;f;m;Annemarie störte Malte, weil sie nicht schlafen konnte;9;1;Annemarie störte Malte, weil ...;SE;1;Annemarie störte Malte, weil sie laut Musik hörte.
+4;weil;1;m;f;Yannick himmelte Janina an, weil sie die Tante war die immer so lusteige Ideen haattte;14;1;Yannick himmelte Janina an, weil ...;ES;1;Yannick himmelte Janina an, weil sie so herzlich und klug war.
+5;sodass;1;f;m;Janina verblüffte Yannick, sodass sie stolz auf sich war;14;1;Janina verblüffte Yannick, sodass ...;SE;1;Janina verblüffte Yannick, sodass er sprachlos war.
+7;sodass;1;f;m;Anna bewunderte Armin, sodass sie die Party gemeinsam verliesen;11;4;Anna bewunderte Armin, sodass ...;ES;1;Anna bewunderte Armin, sodass sie beschloss, ihm ein Geschenk zu machen.
+3;weil;1;f;m;Saskia respektierte Kevin, weil er immer zu seinem Wort stand.;4;2;Saskia respektierte Kevin, weil ...;ES;1;Saskia respektierte Kevin, weil er immer ehrlich und zuverlässig war.
+5;sodass;1;f;m;Martha bezauberte Tim, sodass sie mit ihm essen geht;5;4;Martha bezauberte Tim, sodass ...;SE;1;Martha bezauberte Tim, sodass er die Zeit völlig vergaß.
+6;sodass;1;m;f;Yannick verblüffte Janina, sodass er ihr ihre Ãœberraschung richtig ansehen konnte.;14;4;Yannick verblüffte Janina, sodass ...;SE;1;Yannick verblüffte Janina, sodass sie vor Staunen sprachlos war.
+7;sodass;1;f;m;Katharina fürchtete Rüdiger, sodass sie sich ständig beobachtet fühlte.;15;4;Katharina fürchtete Rüdiger, sodass ...;ES;1;Katharina fürchtete Rüdiger, sodass sie ihm aus dem Weg ging.
+1;weil;1;f;m;Anna begeisterte Armin, weil sie jeden Tag Sport machte und das mit ihrem vollen TagesAblauf;11;3;Anna begeisterte Armin, weil ...;SE;1;Anna begeisterte Armin, weil sie ihm ein selbstgemaltes Bild schenkte.
+4;weil;1;m;f;Armin bewunderte Anna, weil sie trotz ihrer Krankheit das Leben in vollen Zügeb genießen konnte.;11;2;Armin bewunderte Anna, weil ...;ES;1;Armin bewunderte Anna, weil sie immer hilfsbereit und freundlich war.
+7;sodass;1;f;m;Janina himmelte Yannick an, sodass er genervt war.;14;3;Janina himmelte Yannick an, sodass ...;ES;1;Janina himmelte Yannick an, sodass sie seine Aufmerksamkeit gewinnen wollte.
+8;sodass;1;m;f;Armin bewunderte Anna, sodass er ihr dies ganz offen sagte.;11;3;Armin bewunderte Anna, sodass ...;ES;1;Armin bewunderte Anna, sodass er ihr jeden Wunsch von den Augen ablas.
+1;weil;1;f;m;Saskia inspirierte Kevin, weil sie faszinierend war;4;4;Saskia inspirierte Kevin, weil ...;SE;1;Saskia inspirierte Kevin, weil sie ihm zeigte, dass man durch harte Arbeit und Entschlossenheit seine Träume verwirklichen kann.
+2;weil;1;m;f;Felix irritierte Marike, weil er ihr immer etwas anderes erzählte;17;2;Felix irritierte Marike, weil ...;SE;1;Felix irritierte Marike, weil er ständig Witze machte, die sie nicht verstand.
+4;weil;1;m;f;Patrick verehrte Anastasia, weil sie viel Geld hatte;2;1;Patrick verehrte Anastasia, weil ...;ES;1;Patrick verehrte Anastasia, weil sie ihm stets mit Weisheit und Güte zur Seite stand.
+7;sodass;1;f;m;Melanie bemitleidete Jacob, sodass er sich vorgenommen hat sich mehr anzustrengen.;13;2;Melanie bemitleidete Jacob, sodass ...;ES;1;Melanie bemitleidete Jacob, sodass sie beschloss, ihm zu helfen.
+2;weil;1;m;f;Tim bezauberte Martha, weil Er sehr gut tanzen konnte.;5;2;Tim bezauberte Martha, weil ...;SE;1;Tim bezauberte Martha, weil er so charmant und witzig war.
+6;sodass;1;m;f;Daniel verwirrte Jana, sodass sie ihm ein Sandwich mit Holz belegte.;6;4;Daniel verwirrte Jana, sodass ...;SE;1;Daniel verwirrte Jana, sodass sie nicht wusste, wie sie reagieren sollte.
+7;sodass;1;f;m;Saskia respektierte Kevin, sodass Er ihr alles auftischen konnte.;4;1;Saskia respektierte Kevin, sodass ...;ES;1;Saskia respektierte Kevin, sodass sie seine Meinung in allen wichtigen Entscheidungen berücksichtigte.
+8;sodass;1;m;f;Felix vermisste Marike, sodass er begann, seltsame Eigenheiten zu entwickeln, um den Verlust zu kompensieren;17;1;Felix vermisste Marike, sodass ...;ES;1;Felix vermisste Marike, sodass er jeden Tag an sie dachte und ihr schließlich einen Brief schrieb.
+1;weil;1;f;m;Simone enttäuschte Michael, weil sie seinen Geburtstag vergessen hatte.;3;3;Simone enttäuschte Michael, weil ...;SE;1;Simone enttäuschte Michael, weil sie ihr Versprechen nicht gehalten hat.
+3;weil;1;f;m;Johanna verachtete Lars, weil er sie betrogen hatte;1;3;Johanna verachtete Lars, weil ...;ES;1;Johanna verachtete Lars, weil er sie immer wieder belog und ihr Vertrauen missbrauchte.
+4;weil;1;m;f;Michael verabscheute Simone, weil sie allen gegenüber so arrogant war;3;2;Michael verabscheute Simone, weil ...;ES;1;Michael verabscheute Simone, weil sie ihn ständig kritisierte.
+8;sodass;1;m;f;Tim vergötterte Martha, sodass es fast schon peinlich wurde;5;1;Tim vergötterte Martha, sodass ...;ES;1;Tim vergötterte Martha, sodass er alles tat, um sie glücklich zu machen.
+4;weil;1;m;f;Jacob bemitleidete Melanie, weil sie schlecht in Mathe war.;13;4;Jacob bemitleidete Melanie, weil ...;ES;1;Jacob bemitleidete Melanie, weil sie ihren Job verloren hatte.
+5;sodass;1;f;m;Anastasia faszinierte Patrick, sodass er ganz hin und weg war.;2;1;Anastasia faszinierte Patrick, sodass ...;SE;1;Anastasia faszinierte Patrick, sodass er ständig an sie denken musste.
+6;sodass;1;m;f;Klaus erstaunte Marie, sodass sie sich länger nicht von dem Schrecken erholte.;18;4;Klaus erstaunte Marie, sodass ...;SE;1;Klaus erstaunte Marie, sodass sie sprachlos war.
+8;sodass;1;m;f;Jacob bemitleidete Melanie, sodass sie dich zurückzog.;13;1;Jacob bemitleidete Melanie, sodass ...;ES;1;Jacob bemitleidete Melanie, sodass sie Trost bei ihm suchte.
+2;weil;1;m;f;Patrick faszinierte Anastasia, weil er so lange Beine hatte.;2;3;Patrick faszinierte Anastasia, weil ...;SE;1;Patrick faszinierte Anastasia, weil er eine geheimnisvolle Aura hatte und sie mit seinen Geschichten in den Bann zog.
+4;weil;1;m;f;Felix vermisste Marike, weil sie schon seit ein paar Monaten im Ausland war.;17;4;Felix vermisste Marike, weil ...;ES;1;Felix vermisste Marike, weil sie seine beste Freundin und Lichtblick im Alltag war.
+5;sodass;1;f;m;Alisa erschütterte Alexander, sodass dieser sich erst einmal setzen musste.;19;2;Alisa erschütterte Alexander, sodass ...;SE;1;Alisa erschütterte Alexander, sodass er sprachlos stehenblieb.
+8;sodass;1;m;f;Rüdiger fürchtete Katharina, sodass sie Karate lernte.;15;3;Rüdiger fürchtete Katharina, sodass ...;ES;1;Rüdiger fürchtete Katharina, sodass er meistens vermied, ihr direkt in die Augen zu schauen.
+1;weil;1;f;m;Jana verwirrte Daniel, weil sie ihm nichts konkretes erzählte;6;2;Jana verwirrte Daniel, weil ...;SE;1;Jana verwirrte Daniel, weil sie plötzlich ihre Meinung änderte.
+2;weil;1;m;f;Daniel verwirrte Jana, weil er plötzlich keine Lust mehr auf Minigolf hat.;6;3;Daniel verwirrte Jana, weil ...;SE;1;Daniel verwirrte Jana, weil er ihr widersprüchliche Informationen gab.
+7;sodass;1;f;m;Anastasia verehrte Patrick, sodass er Abstand zu ihr hielt.;2;3;Anastasia verehrte Patrick, sodass ...;ES;1;Anastasia verehrte Patrick, sodass sie ihm jeden Wunsch von den Augen ablas.
+8;sodass;1;m;f;Tobias mochte Jennifer, sodass er ihr ein Geschenk machte.;8;4;Tobias mochte Jennifer, sodass ...;ES;1;Tobias mochte Jennifer, sodass er häufig ihre Nähe suchte.
+4;weil;1;m;f;Klaus ekelte sich vor Marie, weil sie schlecht roch.;18;1;Klaus ekelte sich vor Marie, weil ...;ES;1;Klaus ekelte sich vor Marie, weil sie eine Spinne in der Hand hielt.
+6;sodass;1;m;f;Dennis entzückte Stefanie, sodass sie fröhlich gestimmt war.;16;2;Dennis entzückte Stefanie, sodass ...;SE;1;Dennis entzückte Stefanie, sodass sie lächelte und ihre Augen vor Freude strahlten.
+7;sodass;1;f;m;Annemarie hasste Malte, sodass sie beide nicht miteinander reden;9;2;Annemarie hasste Malte, sodass ...;ES;1;Annemarie hasste Malte, sodass sie jedes Treffen mit ihm vermied.
+8;sodass;1;m;f;Lars verachtete Johanna, sodass Er sie ignorierte;1;1;Lars verachtete Johanna, sodass ...;ES;1;Lars verachtete Johanna, sodass er jede Gelegenheit nutzte, um ihr das Leben schwer zu machen.
+1;weil;1;f;m;Katharina ängstigte Rüdiger, weil Rüdiger ein Angsthase ist und vor jedem Mist Angst hat.;15;3;Katharina ängstigte Rüdiger, weil ...;SE;1;Katharina ängstigte Rüdiger, weil sie ein Geheimnis über ihn wusste.
+2;weil;1;m;f;Robin beeindruckte Adele, weil er Klimmzüge machte.;10;3;Robin beeindruckte Adele, weil ...;SE;1;Robin beeindruckte Adele, weil er auf der Gitarre ein wunderschönes Lied spielte.
+4;weil;1;m;f;Kevin respektierte Saskia, weil sie sich gut in die Gruppe inteegrierte.;4;3;Kevin respektierte Saskia, weil ...;ES;1;Kevin respektierte Saskia, weil sie immer ehrlich und fair war.
+5;sodass;1;f;m;Stefanie entzückte Dennis, sodass sie ihn küsste;16;3;Stefanie entzückte Dennis, sodass ...;SE;1;Stefanie entzückte Dennis, sodass er sich in sie verliebte.
+3;weil;1;f;m;Anastasia verehrte Patrick, weil er eine Reihe ausgezeichneter Eigenschaften aufwies.;2;4;Anastasia verehrte Patrick, weil ...;ES;1;Anastasia verehrte Patrick, weil er stets gut zu ihr war und sie mit Respekt behandelte.
+4;weil;1;m;f;Robin achtete Adele, weil sie gut war;10;1;Robin achtete Adele, weil ...;ES;1;Robin achtete Adele, weil sie immer hilfsbereit und freundlich war.
+5;sodass;1;f;m;Anna begeisterte Armin, sodass er von ihr schwärmte;11;2;Anna begeisterte Armin, sodass ...;SE;1;Anna begeisterte Armin, sodass er ein breites Lächeln auf seinem Gesicht hatte.
+7;sodass;1;f;m;Aisha bedauerte Albert, sodass man schon genervt davon war.;20;1;Aisha bedauerte Albert, sodass ...;ES;1;Aisha bedauerte Albert, sodass sie ihm anbot, das Wochenende gemeinsam zu verbringen.
+2;weil;1;m;f;Dennis entzückte Stefanie, weil sie so schöne Locken hatte.;16;1;Dennis entzückte Stefanie, weil ...;SE;1;Dennis entzückte Stefanie, weil er ihr ein wunderschönes Geschenk machte.
+3;weil;1;f;m;Marie ekelte sich vor Klaus, weil dieser eine schlechte Körperhygiene hat;18;4;Marie ekelte sich vor Klaus, weil ...;ES;1;Marie ekelte sich vor Klaus, weil er sich nie wusch und immer dreckige Kleidung trug.
+7;sodass;1;f;m;Jana misstraute Daniel, sodass Dieser sich was einfallen lassen musste, dass sie ihm wieder vertrauen konnte.;6;3;Jana misstraute Daniel, sodass ...;ES;1;Jana misstraute Daniel, sodass sie Abstand zu ihm hielt und ihre Geheimnisse für sich behielt.
+8;sodass;1;m;f;Robin achtete Adele, sodass sie sich gut fühlte.;10;2;Robin achtete Adele, sodass ...;ES;1;Robin achtete Adele, sodass sie ihm vertraute.
