@@ -127,15 +127,9 @@ def num_characters(item):
 # - **Form**: Form der Anapher
 # - **Subordination**: Existiert Subordination in der Fortsetzung?
 # - **Tokens**: Anzahl Tokens in der Fortsetzung
-# - **Buchstaben**: Anzahl Buhstaben in der Fortsetzung
+# - **Buchstaben**: Anzahl Buchstaben in der Fortsetzung
 
-# In[6]:
-
-
-# has_connector: Enthält der Prompt einen Konnektor? -> Nur Koreferenz und anaphorische Form annotieren
-def annotate(row):
-    if row["type"] != "Experiment":
-        return {}
+def annotate(row, prefix):
     text = nlp((row["prompt"] + " " + row["cont"]).split(".")[0])
     comma = next(token for token in text if token.text == ",").i
     prompt = text[:comma+1]
@@ -144,22 +138,24 @@ def annotate(row):
     if "verbclass" in row.keys():
         item["verbclass"] = row["verbclass"]
     result = dict()
-    result["analysierbar"] = is_complete(item)
-    result["Anzahl_Ref"], result["Koref_Ana1"], result["erste_Stelle"], result["Form_Ana1"] = coreference(item)
-    result["Einbettung"] = subordination(item)
-    result["Anzahl_Tokens"] = num_tokens(item)
-    result["Anzahl_Zeichen"] = num_characters(item)
+    result[prefix + "analysierbar"] = is_complete(item)
+    result[prefix + "Anzahl_Ref"], result[prefix + "Koref_Ana1"], result[prefix + "erste_Stelle"], result[prefix + "Form_Ana1"] = coreference(item)
+    result[prefix + "Einbettung"] = subordination(item)
+    result[prefix + "Anzahl_Tokens"] = num_tokens(item)
+    result[prefix + "Anzahl_Zeichen"] = num_characters(item)
     return result
 
 
 
-def do_annotation(df):
+def do_annotation(df, prefix=""):
     """
+    Annotiert ein Dataframe mit Textfortsetzungen.
+    - **df**: Das zu annotierende Dataframe
+    - **prefix**: Wenn erwünscht, können die annotierten Spalten ein Prefix bekommen. Das ist sinnvoll, wenn zwei oder mehr Fortsetzungen in der gleichen Zeile stehen
     Datenschema
     
     Folgende Spalten muss die zu annotierende Datei umfassen:
     
-    - *type*: Nur wenn type = "Experiment" ist, wird die Zeile annotiert.
     - *prompt*: Enthält Prompt bis einschließlich Komma / Konnektor (ohne Leerzeichen). Wenn Kontext vorhanden, muss der vorher entfernt werden. Prompt ist also nur der Prompt-Satz ohne vorhergehende Kontextsätze
     - *cont*: Enthält Fortsetzung nach dem Komma (ohne Leerzeichen vor dem ersten Wort)
     - *NP1*: Name von NP1
@@ -169,7 +165,7 @@ def do_annotation(df):
     """
     
     index = df.index
-    res = pd.DataFrame.from_records(list(df.progress_apply(lambda row: annotate(row), axis=1)))
+    res = pd.DataFrame.from_records(list(df.progress_apply(lambda row: annotate(row, prefix), axis=1)))
     res.index = df.index
     return pd.concat([df, res], axis=1)
 
