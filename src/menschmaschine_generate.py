@@ -38,7 +38,7 @@ for model_name, batch_size, device, device_map in models:
     rows = []
     n = 0
     
-    prompts_regular = PromptDataset([prompt[:-4] for prompt in df_regular["prompt"].tolist()])
+    prompts_regular = PromptDataset(df_regular["prompt"].tolist())
     conts_regular = []
     
     for out in tqdm(model(prompts_regular, batch_size = batch_size, remove_invalid_values=True, early_stopping = True, do_sample = False, diversity_penalty = .6, num_beam_groups = 10, num_beams = 10, max_new_tokens = 25), total = len(prompts_regular)):
@@ -46,7 +46,7 @@ for model_name, batch_size, device, device_map in models:
     df_regular["Bloom"] = conts_regular
     df_regular.to_csv("../data/Judge_1_not_corrected_ChatGPT_Bloom.csv", index=None, sep=";")
     
-    prompts_durch = PromptDataset([prompt[:-1] for prompt in df_durch["prompt"].tolist()])
+    prompts_durch = PromptDataset(df_durch["prompt"].tolist())
     conts_durch = []
     
     for out in tqdm(model(prompts_durch, batch_size = batch_size, remove_invalid_values=True, early_stopping = True, do_sample = False, diversity_penalty = .6, num_beam_groups = 10, num_beams = 10, max_new_tokens = 25), total = len(prompts_durch)):
